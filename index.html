@@ -4,40 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlos Rossi — MCP &amp; AI-Agent Integration Developer</title>
-  <meta name="description" content="I build production Model Context Protocol (MCP) servers and multi-agent systems. Proof: Velora — a live MCP server with ~58 tools running real payments and invoicing. Available for remote work · US/EU · USD." />
+  <meta name="description" content="I build production Model Context Protocol (MCP) servers and multi-agent systems. Proof: Velora — a live MCP server with ~58 tools running real payments and invoicing, operated by Claude, ChatGPT and Gemini. Available for remote work · US/EU · USD." />
+  <meta name="author" content="Carlos Rossi" />
 
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Carlos Rossi" />
   <meta property="og:title" content="Carlos Rossi — MCP &amp; AI-Agent Integration Developer" />
-  <meta property="og:description" content="Production MCP servers and AI-agent integrations that run in production — not demos. Built Velora: ~58-tool MCP server, multi-agent A2A architecture, on Cloud Run." />
+  <meta property="og:description" content="Production MCP servers and AI-agent integrations that run in production — not demos. Built Velora: ~58-tool MCP server operated live by Claude, ChatGPT and Gemini." />
   <meta property="og:url" content="https://cv.somosvelora.com/" />
+  <meta property="og:image" content="https://cv.somosvelora.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Carlos Rossi — MCP &amp; AI-agent integration developer." />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carlos Rossi — MCP &amp; AI-Agent Integration Developer" />
+  <meta name="twitter:description" content="Built Velora: a live ~58-tool MCP server operated by Claude, ChatGPT and Gemini. Available · Remote · USD." />
+  <meta name="twitter:image" content="https://cv.somosvelora.com/assets/og-image.png" />
   <meta name="theme-color" content="#FAF6EE" />
   <link rel="canonical" href="https://cv.somosvelora.com/" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
 
   <!-- Type: Fraunces (editorial serif) + DM Sans (body) + JetBrains Mono — Velora's exact families -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- GSAP + ScrollTrigger via CDN (static-compatible, progressive enhancement) -->
+  <!-- GSAP + ScrollTrigger + Three.js via CDN (static-compatible, progressive enhancement) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="ink.js" defer></script>
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD: Person schema for rich indexing / sharing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carlos Rossi",
+    "url": "https://cv.somosvelora.com/",
+    "image": "https://cv.somosvelora.com/assets/og-image.png",
+    "jobTitle": "MCP & AI-Agent Integration Developer",
+    "email": "mailto:gestiones@somosvelora.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Mendoza", "addressCountry": "AR" },
+    "knowsLanguage": ["en", "es"],
+    "knowsAbout": [
+      "Model Context Protocol (MCP)",
+      "AI Agents",
+      "Multi-Agent Systems",
+      "A2A Protocol",
+      "Google ADK",
+      "TypeScript",
+      "Next.js",
+      "Google Cloud Run"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Velora",
+      "url": "https://somosvelora.com"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Custom MCP server for your SaaS or API" },
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "price": "1500", "description": "from" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "AI agent integration audit & roadmap" },
+        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "price": "400" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <a class="skip-link" href="#work">Skip to work</a>
 
   <!-- ============================ NAV ============================ -->
   <nav id="nav" aria-label="Primary">
     <div class="nav-inner">
       <a href="#top" class="nav-mark" aria-label="Carlos Rossi — home">Carlos&nbsp;Rossi</a>
       <div class="nav-links">
-        <a href="#services">Services</a>
         <a href="#work">Work</a>
+        <a href="#services">Services</a>
         <a href="#stack">Stack</a>
       </div>
       <span class="nav-cta">
-        <a class="btn btn-primary" href="mailto:gestiones@somosvelora.com?subject=Project%20inquiry">Hire me</a>
+        <a class="btn btn-primary" href="mailto:gestiones@somosvelora.com?subject=Project%20inquiry">Get in touch</a>
       </span>
     </div>
   </nav>
@@ -45,66 +105,134 @@
   <!-- ============================ HERO ============================ -->
   <header class="hero" id="top">
     <div class="wrap hero-grid">
-      <div>
-        <h1 class="hero-name" data-reveal>Carlos&nbsp;Rossi</h1>
-        <p class="hero-role" data-reveal>MCP &amp; AI-agent integration developer</p>
-
-        <p class="hero-pitch" data-reveal>
-          I design and ship <strong>MCP (Model Context Protocol) servers</strong> and
-          AI-agent integrations that run in production — <strong>not demos</strong>.
-          Any MCP client — Claude, ChatGPT, Cursor, Gemini — can operate a real
-          business through what I build.
-        </p>
-
-        <div class="hero-actions" data-reveal>
-          <a class="btn btn-primary" href="mailto:gestiones@somosvelora.com?subject=Project%20inquiry">Hire me</a>
-          <a class="btn btn-ghost" href="#work">See the proof</a>
+      <div class="hero-lead">
+        <!-- WebGL ink-bloom wordmark renders over the static H1; the H1
+             stays as the accessible, no-JS, reduced-motion fallback. -->
+        <div class="hero-name-stage">
+          <h1 class="hero-name" data-hero>Carlos<br />Rossi</h1>
+          <div id="ink" class="ink-stage" aria-hidden="true"></div>
         </div>
 
-        <p class="hero-avail" data-reveal>
+        <p class="hero-role" data-hero>MCP &amp; AI-agent integration developer</p>
+
+        <p class="hero-pitch" data-hero>
+          I design and ship <strong>Model Context Protocol servers</strong> and
+          AI-agent integrations that run in production — <strong>not demos</strong>.
+          Claude, ChatGPT, Cursor or Gemini can operate a real business through
+          what I build.
+        </p>
+
+        <div class="hero-actions" data-hero>
+          <a class="btn btn-primary" href="#contact">Book a call</a>
+          <a class="btn btn-ghost" href="#work">See the proof ↓</a>
+        </div>
+
+        <p class="hero-avail" data-hero>
           <span class="pulse-dot" aria-hidden="true"></span>
           Available · Remote · US/EU friendly · USD
         </p>
       </div>
-
-      <!-- Proof panel: an MCP connection echoing Velora's surface -->
-      <aside class="hero-card" data-reveal aria-hidden="true">
-        <div class="hero-card-bar">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="label">mcp · velora</span>
-        </div>
-        <div class="hero-card-body">
-          <div class="row"><span class="mut">$</span> mcp connect <span class="key">tools.somosvelora.com</span></div>
-          <div class="row"><span class="mut">→</span> auth: HMAC-SHA256 · multi-tenant</div>
-          <div class="row"><span class="mut">→</span> tools loaded: <span class="key">58</span> · packs: <span class="key">14</span></div>
-          <div class="row"><span class="mut">→</span> agents online: <span class="key">12+</span> over A2A</div>
-          <div class="row"><span class="mut">⚑</span> register_sale · emit_invoice · quote_shipping</div>
-          <div class="row"><span class="ok">●</span> ready — operate a real business from chat</div>
-        </div>
-      </aside>
+    </div>
+    <div class="hero-baseline" aria-hidden="true">
+      <span class="mono">mcp · tools.somosvelora.com</span>
+      <span class="mono">58 tools · 14 packs · 12+ agents over A2A</span>
     </div>
   </header>
 
-  <!-- ============================ STATS ============================ -->
-  <section class="section--tight">
+  <!-- ============================ CASE STUDY / PROOF ============================ -->
+  <section class="section case" id="work">
     <div class="wrap">
-      <div class="stats">
-        <div class="stat" data-reveal>
-          <div class="stat-num">~58</div>
-          <div class="stat-label">MCP tools in production, across 14 packs</div>
+      <div class="case-head">
+        <p class="eyebrow on-dark" data-reveal>Case study · live in production</p>
+        <h2 class="case-title" data-reveal>
+          Velora — where Claude, ChatGPT &amp; Gemini run a real business
+        </h2>
+        <p class="case-lead" data-reveal>
+          A chat-first, multi-agent commerce platform for businesses in Argentina.
+          It exposes a production MCP server with ~58 tools covering the full commerce
+          cycle — and any MCP client can operate a real business through it, with
+          HMAC-authenticated, multi-tenant access. This is the actual product, live.
+        </p>
+      </div>
+
+      <!-- REAL VISUAL EVIDENCE — captured from the live product -->
+      <figure class="proof proof-wide" data-reveal>
+        <div class="browser">
+          <div class="browser-bar">
+            <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+            <span class="url mono">somosvelora.com</span>
+          </div>
+          <img
+            src="assets/velora-integrations.png"
+            width="1188" height="1112"
+            loading="lazy" decoding="async"
+            alt="Velora's product: Claude, ChatGPT and Gemini each operating the same business over MCP — selling, reading the live catalog with prices and stock, and generating a payment link." />
         </div>
-        <div class="stat" data-reveal>
-          <div class="stat-num">12+</div>
-          <div class="stat-label">specialized agents over the A2A protocol</div>
+        <figcaption>
+          The same MCP server, three clients. Claude sells and sends a MercadoPago
+          link; ChatGPT reads the live catalog; Gemini queries sales — all over the
+          open MCP standard, against one real business.
+        </figcaption>
+      </figure>
+
+      <div class="proof-pair">
+        <figure class="proof" data-reveal>
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+              <span class="url mono">somosvelora.com</span>
+            </div>
+            <img
+              src="assets/velora-landing-desktop.png"
+              width="1440" height="900"
+              loading="lazy" decoding="async"
+              alt="Velora landing page: a chat-first commerce assistant answering a customer about catalog stock in real time." />
+          </div>
+          <figcaption>Chat-first surface — the assistant answers a customer about catalog &amp; stock in real time.</figcaption>
+        </figure>
+
+        <figure class="proof proof-phone" data-reveal>
+          <div class="device">
+            <img
+              src="assets/velora-landing-mobile.png"
+              width="390" height="844"
+              loading="lazy" decoding="async"
+              alt="Velora on mobile: the same chat-first commerce assistant, responsive on a phone." />
+          </div>
+          <figcaption>Mobile — same surface, responsive.</figcaption>
+        </figure>
+      </div>
+
+      <div class="case-grid">
+        <div class="case-cell" data-reveal>
+          <h4>~58 tools, 14 packs</h4>
+          <p>
+            Fiscal invoicing (AFIP/ARCA), MercadoPago payments and payment links,
+            logistics, catalog, sales, cash register, and WhatsApp messaging via the
+            Meta Cloud API.
+          </p>
         </div>
-        <div class="stat" data-reveal>
-          <div class="stat-num">4</div>
-          <div class="stat-label">MCP clients supported — Claude, ChatGPT, Cursor, Gemini</div>
+        <div class="case-cell" data-reveal>
+          <h4>Multi-agent over A2A</h4>
+          <p>
+            A supervisor + specialized sub-agents communicating over the A2A protocol,
+            with signed agent identities (Ed25519), orchestrated with Google ADK and
+            Gemini.
+          </p>
         </div>
-        <div class="stat" data-reveal>
-          <div class="stat-num">1</div>
-          <div class="stat-label">live platform running real payments &amp; invoicing</div>
+        <div class="case-cell" data-reveal>
+          <h4>Built for production</h4>
+          <p>
+            Next.js / TypeScript on Cloud Run with Postgres. Idempotent money-path
+            mutations, per-tenant isolation, webhook signature verification, async task
+            queues.
+          </p>
         </div>
+      </div>
+
+      <div class="case-actions" data-reveal>
+        <a class="btn btn-on-dark" href="#contact">Talk about a similar build</a>
+        <a class="btn btn-ghost on-dark" href="https://somosvelora.com" target="_blank" rel="noopener">Visit Velora ↗</a>
       </div>
     </div>
   </section>
@@ -151,60 +279,9 @@
         </article>
       </div>
 
-      <p class="card-meta" style="margin-top:1.6rem" data-reveal>
-        Day rate from <strong style="color:var(--color-ink)">USD&nbsp;50–65/h</strong> for ongoing
-        or open-ended work.
+      <p class="card-meta services-rate" data-reveal>
+        Day rate from <strong>USD&nbsp;50–65/h</strong> for ongoing or open-ended work.
       </p>
-    </div>
-  </section>
-
-  <!-- ============================ CASE STUDY ============================ -->
-  <section class="section case" id="work">
-    <div class="wrap">
-      <div class="case-head">
-        <p class="eyebrow on-dark" data-reveal>Case study · production</p>
-        <h2 class="case-title" data-reveal>
-          Velora — an agentic-commerce platform where AI agents run real business operations
-        </h2>
-        <p class="case-lead" data-reveal>
-          A chat-first, multi-agent commerce platform for businesses in Argentina. It
-          exposes a production MCP server with ~58 tools covering the full commerce
-          cycle — and any MCP client can operate a real business through it, with
-          HMAC-authenticated, multi-tenant access.
-        </p>
-      </div>
-
-      <div class="case-grid">
-        <div class="case-cell" data-reveal>
-          <h4>~58 tools, 14 packs</h4>
-          <p>
-            Fiscal invoicing (AFIP/ARCA), MercadoPago payments and payment links,
-            logistics, catalog, sales, cash register, and WhatsApp messaging via the
-            Meta Cloud API.
-          </p>
-        </div>
-        <div class="case-cell" data-reveal>
-          <h4>Multi-agent over A2A</h4>
-          <p>
-            A supervisor + specialized sub-agents communicating over the A2A protocol,
-            with signed agent identities (Ed25519), orchestrated with Google ADK and
-            Gemini.
-          </p>
-        </div>
-        <div class="case-cell" data-reveal>
-          <h4>Built for production</h4>
-          <p>
-            Next.js / TypeScript on Cloud Run with Postgres. Idempotent money-path
-            mutations, per-tenant isolation, webhook signature verification, async task
-            queues.
-          </p>
-        </div>
-      </div>
-
-      <div class="case-actions" data-reveal>
-        <a class="btn btn-on-dark" href="mailto:gestiones@somosvelora.com?subject=Velora%20%E2%80%94%20tell%20me%20more">Talk about a similar build</a>
-        <a class="btn btn-ghost on-dark" href="https://somosvelora.com" target="_blank" rel="noopener">Visit Velora ↗</a>
-      </div>
     </div>
   </section>
 
@@ -280,9 +357,12 @@
         Tell me what you're connecting and to which client. I'll come back with a
         concrete plan and an estimate.
       </p>
-      <div class="hero-actions" data-reveal style="justify-content:center;margin-top:0.4rem">
-        <a class="btn btn-primary" href="mailto:gestiones@somosvelora.com?subject=Project%20inquiry">Hire me</a>
-        <a class="btn btn-ghost" href="mailto:gestiones@somosvelora.com?subject=Book%20a%20call">Book a call</a>
+      <div class="hero-actions contact-actions" data-reveal>
+        <!-- PENDING: replace with Carlos's real Cal.com link when available -->
+        <a class="btn btn-primary" href="https://cal.com/carlos-rossi" target="_blank" rel="noopener">Book a 30-min call</a>
+        <button class="btn btn-ghost copy-email" type="button" data-email="gestiones@somosvelora.com">
+          <span class="copy-label">gestiones@somosvelora.com</span>
+        </button>
       </div>
       <p class="contact-meta" data-reveal>
         <span class="pulse-dot" aria-hidden="true"></span>
@@ -309,45 +389,69 @@
       var root = document.documentElement;
       var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+      // Copy-email microinteraction (works regardless of motion pref).
+      var copyBtn = document.querySelector(".copy-email");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          var email = copyBtn.getAttribute("data-email");
+          var label = copyBtn.querySelector(".copy-label");
+          var prev = label.textContent;
+          function done() {
+            copyBtn.classList.add("copied");
+            label.textContent = "Copied ✓";
+            setTimeout(function () {
+              copyBtn.classList.remove("copied");
+              label.textContent = prev;
+            }, 1600);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(done, function () {
+              window.location.href = "mailto:" + email;
+            });
+          } else {
+            window.location.href = "mailto:" + email;
+          }
+        });
+      }
+
       // Sticky-nav frost on scroll (mirrors Velora's Header behavior)
       var nav = document.getElementById("nav");
       function onScroll() { nav.classList.toggle("solid", window.scrollY > 8); }
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
 
-      // Mark JS so reveal base-state applies only when we can animate it back in.
       if (reduce) return;
       root.classList.add("js");
 
-      function startReveals() {
+      function startMotion() {
+        var hero = Array.prototype.slice.call(document.querySelectorAll("[data-hero]"));
         var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+
         if (window.gsap && window.ScrollTrigger) {
           gsap.registerPlugin(ScrollTrigger);
+
+          // ONE memorable hero moment: a staged, clip-driven lift-in.
+          var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+          tl.from(hero, {
+            yPercent: 18, opacity: 0, duration: 0.9, stagger: 0.08,
+            onStart: function () { hero.forEach(function (el) { el.classList.add("is-in"); }); }
+          });
+
+          // Restrained, content-aware reveals everywhere else.
           items.forEach(function (el) {
             gsap.to(el, {
-              opacity: 1, y: 0, duration: 0.8, ease: "power3.out",
-              scrollTrigger: { trigger: el, start: "top 88%", once: true },
+              opacity: 1, y: 0, duration: 0.7, ease: "power2.out",
+              scrollTrigger: { trigger: el, start: "top 86%", once: true },
               onStart: function () { el.classList.add("is-in"); }
             });
           });
         } else {
-          // Fallback: IntersectionObserver toggles the CSS .is-in class.
-          if (!("IntersectionObserver" in window)) {
-            items.forEach(function (el) { el.classList.add("is-in"); });
-            return;
-          }
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (e) {
-              if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
-            });
-          }, { rootMargin: "0px 0px -12% 0px" });
-          items.forEach(function (el) { io.observe(el); });
+          hero.concat(items).forEach(function (el) { el.classList.add("is-in"); });
         }
       }
 
-      // GSAP is deferred; wait for load so the CDN scripts are parsed.
-      if (document.readyState === "complete") startReveals();
-      else window.addEventListener("load", startReveals);
+      if (document.readyState === "complete") startMotion();
+      else window.addEventListener("load", startMotion);
     })();
   </script>
 
