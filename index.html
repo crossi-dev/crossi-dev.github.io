@@ -33,11 +33,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- GSAP + ScrollTrigger + Three.js via CDN (static-compatible, progressive enhancement) -->
+  <!-- GSAP + ScrollTrigger via CDN (static-compatible, progressive enhancement) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="ink.js" defer></script>
 
   <link rel="stylesheet" href="style.css" />
 
@@ -106,13 +104,7 @@
   <header class="hero" id="top">
     <div class="wrap hero-grid">
       <div class="hero-lead">
-        <!-- WebGL ink-bloom wordmark renders over the static H1; the H1
-             stays as the accessible, no-JS, reduced-motion fallback. -->
-        <div class="hero-name-stage">
-          <h1 class="hero-name" data-hero>Carlos<br />Rossi</h1>
-          <div id="ink" class="ink-stage" aria-hidden="true"></div>
-        </div>
-
+        <h1 class="hero-name" data-hero>Carlos&nbsp;Rossi</h1>
         <p class="hero-role" data-hero>MCP &amp; AI-agent integration developer</p>
 
         <p class="hero-pitch" data-hero>
@@ -132,10 +124,22 @@
           Available · Remote · US/EU friendly · USD
         </p>
       </div>
-    </div>
-    <div class="hero-baseline" aria-hidden="true">
-      <span class="mono">mcp · tools.somosvelora.com</span>
-      <span class="mono">58 tools · 14 packs · 12+ agents over A2A</span>
+
+      <!-- Proof panel: a live MCP connection echoing Velora's surface -->
+      <aside class="hero-card" data-hero aria-hidden="true">
+        <div class="hero-card-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="label">mcp · velora</span>
+        </div>
+        <div class="hero-card-body">
+          <div class="row"><span class="mut">$</span> mcp connect <span class="key">tools.somosvelora.com</span></div>
+          <div class="row"><span class="mut">→</span> auth: HMAC-SHA256 · multi-tenant</div>
+          <div class="row"><span class="mut">→</span> tools loaded: <span class="key">58</span> · packs: <span class="key">14</span></div>
+          <div class="row"><span class="mut">→</span> agents online: <span class="key">12+</span> over A2A</div>
+          <div class="row"><span class="mut">⚑</span> register_sale · emit_invoice · quote_shipping</div>
+          <div class="row"><span class="ok">●</span> ready — operate a real business from chat</div>
+        </div>
+      </aside>
     </div>
   </header>
 

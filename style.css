@@ -318,7 +318,12 @@ h1, h2, h3, h4, p { margin: 0; }
   overflow: hidden;
 }
 .hero-grid {
-  display: block;
+  display: grid;
+  gap: clamp(40px, 5vw, 72px);
+  align-items: center;
+}
+@media (min-width: 940px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(300px, 440px); }
 }
 .hero-name {
   font-family: var(--font-serif);
@@ -585,44 +590,46 @@ footer {
 .skip-link:focus { left: 0; }
 
 /* ============================================================
-   HERO — WebGL ink-bloom wordmark stage
-   The static <h1> is the accessible / no-JS / reduced-motion base.
-   When the WebGL canvas mounts, .ink-on fades the H1 out so only the
-   shader wordmark shows — but the H1 text remains in the DOM for SR/SEO.
+   HERO — side proof panel: a "terminal" card echoing Velora's
+   live MCP surface. Quiet evidence, navy-on-cream, no spectacle.
    ============================================================ */
-.hero-name-stage {
-  position: relative;
-  /* reserve the wordmark's height so the canvas has a box to fill */
-  min-height: clamp(7.2rem, 19vw, 13.4rem);
-}
-.ink-stage {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;     /* pointer events handled on window in ink.js */
-  opacity: 0;
-  transition: opacity 0.6s var(--ease-out);
-}
-.ink-stage.ink-on { opacity: 1; pointer-events: auto; }
-.ink-stage canvas { width: 100%; height: 100%; display: block; }
-/* The rasterized static H1 is faded out from ink.js once WebGL is live
-   (inline opacity, to beat the GSAP intro's inline style). It stays in
-   the DOM for screen readers / SEO / no-JS / reduced-motion. */
 .hero-lead { max-width: 46rem; }
-
-/* mono baseline strip under the hero — quiet proof line */
-.hero-baseline {
-  margin-top: clamp(40px, 7vw, 88px);
-  border-top: 1px solid var(--color-line);
-  padding-top: 1.1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 2rem;
-  font-size: 0.8125rem;
-  letter-spacing: 0.02em;
-  color: var(--color-ink-40);
-}
-.hero-baseline .mono { font-family: var(--font-mono); }
 .hero .wrap { width: 100%; }
+
+.hero-card {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.hero-card-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-surface-subtle);
+}
+.hero-card-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--color-ink-40); }
+.hero-card-bar .label {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-60);
+}
+.hero-card-body {
+  padding: 1.2rem 1.25rem 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  color: var(--color-ink-80);
+}
+.hero-card-body .mut { color: var(--color-ink-40); }
+.hero-card-body .key { color: var(--color-ink); font-weight: 500; }
+.hero-card-body .ok { color: var(--color-green); font-weight: 600; }
+.hero-card-body .row { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* ============================================================
    PROOF — real product screenshots in editorial browser / device frames
@@ -713,7 +720,3 @@ footer {
   color: var(--color-green);
 }
 .contact-actions { justify-content: center; margin-top: 0.4rem; }
-
-@media (prefers-reduced-motion: reduce) {
-  .ink-stage { transition: none; }
-}
