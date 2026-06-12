@@ -4,134 +4,231 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlos Rossi — MCP &amp; AI-Agent Developer</title>
-  <meta name="description" content="Carlos Rossi builds production MCP servers and AI-agent integrations. 58-tool live MCP server behind Velora. Available for remote projects — US &amp; EU clients, USD." />
+  <meta name="description" content="Carlos Rossi builds production MCP servers and multi-agent systems. 58-tool live MCP server powering Velora. Available for remote projects — US &amp; EU clients, USD 50–65/h." />
+  <meta property="og:title" content="Carlos Rossi — MCP &amp; AI-Agent Developer" />
+  <meta property="og:description" content="Production MCP servers and AI-agent integrations. Velora: 58 tools, 12+ agents, A2A identity, real integrations." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Syne (display) + DM Sans (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- GSAP via CDN (static-compatible) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d+q/YkLtWNG7qlLkudrGo/RkbNgZaRArgFQWQfqOJ68UrfQEFOMCnHiGc0iENqTFfIJTuQqGCw==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXIZJ8qhpPyWCC9w==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- NOISE OVERLAY -->
+  <div class="noise" aria-hidden="true"></div>
+
   <!-- NAV -->
-  <nav>
+  <nav id="nav">
     <div class="nav-inner">
-      <span class="nav-logo">Carlos Rossi</span>
+      <a href="#hero" class="nav-logo" aria-label="Back to top">
+        <span class="logo-cr">CR</span>
+        <span class="logo-sep">·</span>
+        <span class="logo-name">Carlos Rossi</span>
+      </a>
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#project">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="btn-nav">Let's talk</a>
+        <a href="#skills">Stack</a>
+        <a href="mailto:gestiones@somosvelora.com?subject=Hire inquiry" class="btn-nav">
+          <span class="btn-nav-dot"></span>
+          Let's talk
+        </a>
       </div>
+      <button class="nav-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="nav-mobile-menu" id="mobileMenu">
+      <a href="#services" class="nav-mobile-link">Services</a>
+      <a href="#project" class="nav-mobile-link">Work</a>
+      <a href="#skills" class="nav-mobile-link">Stack</a>
+      <a href="mailto:gestiones@somosvelora.com?subject=Hire inquiry" class="nav-mobile-link nav-mobile-cta">Let's talk →</a>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
   <section id="hero">
-    <div class="container">
-      <div class="hero-badge">Available for remote work · US &amp; EU clients · USD</div>
-      <h1>MCP &amp; AI&#8209;Agent<br>Integration Developer.</h1>
-      <p class="hero-sub">
-        I build production Model Context Protocol servers and multi-agent systems —
-        not demos. Based in Mendoza, Argentina, working with clients in US&nbsp;&amp;&nbsp;EU.
-        USD&nbsp;50–65/h.
+    <!-- Animated canvas background -->
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+    <!-- Gradient orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+
+    <div class="container hero-container">
+      <div class="hero-eyebrow" data-reveal>
+        <span class="availability-dot"></span>
+        <span>Available for remote work · US &amp; EU · USD 50–65/h</span>
+      </div>
+
+      <h1 class="hero-title" aria-label="AI-native builder. MCP and AI-agent integration developer.">
+        <span class="hero-line" data-reveal-line>AI-native</span>
+        <span class="hero-line hero-line-accent" data-reveal-line>builder.</span>
+        <span class="hero-line hero-line-sub" data-reveal-line>MCP &amp; AI-agent developer.</span>
+      </h1>
+
+      <p class="hero-desc" data-reveal>
+        I ship production Model Context Protocol servers and multi-agent systems
+        that connect AI models to real business operations — not demos.
+        Mendoza, Argentina. Fluent English.
       </p>
-      <div class="hero-cta">
-        <a href="mailto:gestiones@somosvelora.com" class="btn-primary">Hire me →</a>
-        <a href="#services" class="btn-ghost">See services &amp; pricing ↓</a>
+
+      <div class="hero-actions" data-reveal>
+        <a href="mailto:gestiones@somosvelora.com?subject=Hire inquiry" class="btn-primary">
+          <span>Hire me</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#project" class="btn-secondary">
+          <span>See the work</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3v10m0 0L4 9m4 4l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
-      <div class="hero-proof">
-        <span>🔌 58-tool MCP server in production</span>
-        <span>⚡ Multi-agent A2A orchestration</span>
-        <span>☁️ Google Cloud Run · TypeScript</span>
+
+      <div class="hero-stats" data-reveal>
+        <div class="stat">
+          <span class="stat-num" data-count="58">0</span>
+          <span class="stat-label">MCP tools<br>in production</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="12">0</span>
+          <span class="stat-label">specialized<br>AI agents</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">A2A</span>
+          <span class="stat-label">cryptographic<br>agent identity</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">4</span>
+          <span class="stat-label">live<br>integrations</span>
+        </div>
       </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="scroll-line"></span>
+      <span class="scroll-label">scroll</span>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- ===== SERVICES ===== -->
   <section id="services">
     <div class="container">
-      <h2 class="section-label">Services &amp; pricing</h2>
-      <h3 class="section-title">I bridge AI models and real business systems.</h3>
-      <p class="section-sub">Not demos or prototypes. Production-grade pipelines that handle real data and real workflows. Hourly rate: USD&nbsp;50–65/h. Fixed-price packages below.</p>
+      <div class="section-head" data-reveal>
+        <span class="label-tag">Services &amp; pricing</span>
+        <h2 class="section-title">I bridge AI models<br>and real business systems.</h2>
+        <p class="section-desc">Production-grade pipelines with real data and real workflows. Hourly: USD&nbsp;50–65/h.</p>
+      </div>
 
       <!-- PRICING CARDS -->
       <div class="pricing-grid">
 
-        <div class="pricing-card pricing-featured">
-          <div class="pricing-header">
+        <div class="pricing-card pricing-featured" data-reveal>
+          <div class="pricing-card-bg" aria-hidden="true"></div>
+          <div class="pricing-card-content">
             <span class="pricing-badge">Most requested</span>
-            <h4>Custom MCP Server</h4>
-            <div class="pricing-price">from&nbsp;<strong>$1,500</strong></div>
+            <h3 class="pricing-title">Custom MCP Server</h3>
+            <div class="pricing-price">
+              <span class="price-from">from</span>
+              <span class="price-amount">$1,500</span>
+            </div>
+            <p class="pricing-desc">A production-grade MCP server that connects Claude, ChatGPT, or Cursor to your SaaS, database, or internal API. Up to 10 tools, authentication, rate limiting, deployment on Cloud Run or Docker, and documentation. Built by the developer of a live 58-tool MCP server running real payments and invoicing.</p>
+            <ul class="feature-list">
+              <li>Tool design &amp; schema optimised for LLM use</li>
+              <li>Auth, rate-limiting, multi-tenant isolation</li>
+              <li>Deployment (Cloud Run / Docker) + docs</li>
+              <li>1 round of revisions included</li>
+            </ul>
+            <a href="mailto:gestiones@somosvelora.com?subject=Custom MCP Server inquiry" class="btn-primary pricing-btn">
+              <span>Get started</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
-          <p>I'll build a production-grade MCP server that connects Claude, ChatGPT, or Cursor to your SaaS, database, or internal API. Up to 10 tools, authentication, error handling, deployment on Cloud Run or Docker, and documentation. Built by the developer of a live 58-tool MCP server running real payments and invoicing.</p>
-          <ul class="card-list">
-            <li>Tool design &amp; schema optimised for LLM use</li>
-            <li>Auth, rate-limiting, multi-tenant isolation</li>
-            <li>Deployment (Cloud Run / Docker) + docs</li>
-            <li>1 round of revisions included</li>
-          </ul>
-          <a href="mailto:gestiones@somosvelora.com?subject=Custom MCP Server inquiry" class="btn-primary pricing-cta">Get started →</a>
         </div>
 
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <h4>AI Agent Audit &amp; Roadmap</h4>
-            <div class="pricing-price"><strong>$400</strong></div>
+        <div class="pricing-card" data-reveal>
+          <div class="pricing-card-content">
+            <h3 class="pricing-title">AI Agent Audit<br>&amp; Roadmap</h3>
+            <div class="pricing-price">
+              <span class="price-amount">$400</span>
+            </div>
+            <p class="pricing-desc">A 1-week review of your product or API with a concrete plan to make it agent-ready: MCP tool design, auth model, integration architecture, and an implementation estimate. Delivered as a written report plus one 1-hour call.</p>
+            <ul class="feature-list">
+              <li>MCP tool design recommendations</li>
+              <li>Auth &amp; security model for agent access</li>
+              <li>Implementation estimate + risks</li>
+              <li>1-hour debrief call included</li>
+            </ul>
+            <a href="mailto:gestiones@somosvelora.com?subject=AI Agent Audit inquiry" class="btn-outline pricing-btn">
+              <span>Book the audit</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
-          <p>A 1-week review of your product or API with a concrete plan to make it agent-ready: MCP tool design, auth model, integration architecture, and an implementation estimate. Delivered as a written report plus one 1-hour call.</p>
-          <ul class="card-list">
-            <li>MCP tool design recommendations</li>
-            <li>Auth &amp; security model for agent access</li>
-            <li>Implementation estimate + risks</li>
-            <li>1-hour debrief call included</li>
-          </ul>
-          <a href="mailto:gestiones@somosvelora.com?subject=AI Agent Audit inquiry" class="btn-ghost pricing-cta">Book the audit →</a>
         </div>
 
       </div>
 
-      <h3 class="section-title" style="margin-top:64px;">What I build</h3>
-      <p class="section-sub">The four capability areas behind every engagement.</p>
-      <div class="services-grid">
+      <!-- CAPABILITY TILES -->
+      <div class="cap-grid">
 
-        <div class="card">
-          <div class="card-icon">🔌</div>
+        <div class="cap-tile" data-reveal>
+          <div class="cap-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <h4>Custom MCP Servers</h4>
-          <p>I build Model Context Protocol servers that connect your AI assistant (Claude, GPT, Gemini) to your existing tools, APIs, and databases. Your AI stops being a chatbot and starts being an operator.</p>
-          <ul class="card-list">
+          <p>Connect any AI model to your tools, APIs, and databases. Your assistant stops being a chatbot and starts being an operator.</p>
+          <ul class="cap-list">
             <li>Tool design &amp; schema</li>
             <li>Auth, rate-limiting, multi-tenant</li>
-            <li>Deployment on Cloud Run or any host</li>
+            <li>Cloud Run or any host</li>
           </ul>
         </div>
 
-        <div class="card">
-          <div class="card-icon">🕸️</div>
+        <div class="cap-tile" data-reveal>
+          <div class="cap-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="4" cy="6" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="6" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="4" cy="18" r="2" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="18" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M6 6.5L9.5 9.5M14.5 9.5L18 6.5M6 17.5L9.5 14.5M14.5 14.5L18 17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
           <h4>Multi-Agent Pipelines</h4>
-          <p>Orchestration systems where specialized agents collaborate: one handles payments, one handles logistics, one handles invoicing. I wire them together over A2A protocols with cryptographic identity per agent.</p>
-          <ul class="card-list">
-            <li>Google ADK / ADK sub-agents</li>
+          <p>Orchestration systems where specialized agents collaborate over A2A protocols with cryptographic identity per agent.</p>
+          <ul class="cap-list">
+            <li>Google ADK / sub-agents</li>
             <li>A2A protocol (agent-to-agent)</li>
             <li>Supervisor + specialist pattern</li>
           </ul>
         </div>
 
-        <div class="card">
-          <div class="card-icon">⚙️</div>
+        <div class="cap-tile" data-reveal>
+          <div class="cap-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <h4>Business Automation</h4>
-          <p>End-to-end automation that replaces manual workflows: inbound WhatsApp → AI triage → action → confirmation. Scheduled jobs, webhook pipelines, async task queues — the full stack.</p>
-          <ul class="card-list">
+          <p>End-to-end automation: inbound WhatsApp → AI triage → action → confirmation. Webhook pipelines, async task queues, the full stack.</p>
+          <ul class="cap-list">
             <li>WhatsApp Business (Meta Cloud API)</li>
-            <li>Webhook pipelines + Cloud Tasks</li>
-            <li>n8n, scheduled jobs, cron</li>
+            <li>Cloud Tasks + webhook pipelines</li>
+            <li>Scheduled jobs &amp; cron</li>
           </ul>
         </div>
 
-        <div class="card">
-          <div class="card-icon">🧩</div>
+        <div class="cap-tile" data-reveal>
+          <div class="cap-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <h4>LLM Integrations</h4>
-          <p>Drop an LLM into your existing product: intent routing, NLU, structured extraction, AI-assisted decisions. I handle model selection, prompt engineering, fallback chains, and cost control.</p>
-          <ul class="card-list">
+          <p>Drop an LLM into your existing product: intent routing, NLU, structured extraction, AI-assisted decisions. Model selection, prompt engineering, cost control.</p>
+          <ul class="cap-list">
             <li>Gemini, Claude, GPT integrations</li>
             <li>Deterministic-first / LLM-fallback</li>
             <li>Token budgeting &amp; latency tuning</li>
@@ -142,125 +239,136 @@
     </div>
   </section>
 
-  <!-- FEATURED PROJECT -->
+  <!-- ===== FEATURED PROJECT ===== -->
   <section id="project">
     <div class="container">
-      <h2 class="section-label">Featured project</h2>
-      <div class="project-card">
-        <div class="project-header">
-          <div>
-            <span class="project-tag">Production · Live</span>
-            <h3 class="project-title">Velora</h3>
-            <p class="project-tagline">AI-native commerce platform with a full MCP server and A2A multi-agent backbone.</p>
+      <div class="section-head" data-reveal>
+        <span class="label-tag">Featured project</span>
+        <h2 class="section-title">Velora — a production<br>AI-native commerce platform.</h2>
+      </div>
+
+      <div class="project-shell" data-reveal>
+
+        <!-- Left: narrative -->
+        <div class="project-narrative">
+          <div class="project-badges">
+            <span class="badge-live">
+              <span class="badge-live-dot"></span>
+              Production · Live
+            </span>
+            <a href="https://somosvelora.com" target="_blank" rel="noopener" class="badge-link">somosvelora.com ↗</a>
           </div>
-          <div class="project-links">
-            <a href="https://somosvelora.com" target="_blank" rel="noopener" class="btn-outline">Visit site ↗</a>
+
+          <p class="project-lede">
+            A chat-first commerce platform where AI agents run the entire business:
+            register sales, issue invoices, dispatch shipments, collect payments —
+            all from a single conversation.
+          </p>
+
+          <div class="project-two-col">
+            <div>
+              <h4 class="case-label">The problem</h4>
+              <p>Small businesses in Argentina run on a tangle of WhatsApp messages, spreadsheets, and manual steps. Every sale, invoice, shipment, and payment requires a person to coordinate across 4–5 disconnected systems.</p>
+            </div>
+            <div>
+              <h4 class="case-label">What I built</h4>
+              <p>A multi-agent architecture where the owner manages everything through conversation. Each intent routes to the right specialist agent, which executes end-to-end without human relay.</p>
+            </div>
+          </div>
+
+          <div class="arch-callout">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 1.5l2.25 4.5L17 7.125l-4 3.9.944 5.475L9 14.025l-4.944 2.475L5 11.025 1 7.125l5.75-1.125L9 1.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            <p>The MCP server is engine-agnostic: the same 58 tools are consumable by Claude, ChatGPT, Gemini, or any MCP-compatible client. Each agent carries a cryptographic Ed25519 identity for verified agent-to-agent communication over the A2A bus.</p>
           </div>
         </div>
 
-        <div class="case-grid">
-          <div class="case-block">
-            <h5>The problem</h5>
-            <p>Small and mid-size businesses in Argentina run on a tangle of WhatsApp messages, spreadsheets, and manual steps. Every sale, invoice, shipment, and payment requires a person to coordinate across 4–5 disconnected systems. The bottleneck is human coordination — and it doesn't scale.</p>
-          </div>
-          <div class="case-block">
-            <h5>What I built</h5>
-            <p>A chat-first, AI-native commerce platform where the owner manages the entire business through conversation. The system routes each intent to the right specialized agent, which executes the action end-to-end: register a sale, issue an electronic invoice, dispatch a shipment, collect payment — all from a single chat interface.</p>
-          </div>
-        </div>
+        <!-- Right: metrics + tech -->
+        <div class="project-metrics">
 
-        <div class="tech-highlights">
-          <div class="highlight">
-            <span class="highlight-num">58</span>
-            <span class="highlight-label">MCP tools in production</span>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-num">58</span>
+              <span class="metric-label">MCP tools in production</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">12+</span>
+              <span class="metric-label">specialized AI agents</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">A2A</span>
+              <span class="metric-label">cryptographic agent identity</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">4</span>
+              <span class="metric-label">live external integrations</span>
+            </div>
           </div>
-          <div class="highlight">
-            <span class="highlight-num">12+</span>
-            <span class="highlight-label">specialized AI agents</span>
-          </div>
-          <div class="highlight">
-            <span class="highlight-num">A2A</span>
-            <span class="highlight-label">cryptographic agent identity</span>
-          </div>
-          <div class="highlight">
-            <span class="highlight-num">4</span>
-            <span class="highlight-label">real integrations</span>
-          </div>
-        </div>
 
-        <div class="tech-section">
-          <h5>Technical breakdown</h5>
-          <div class="tech-pills-grid">
-
-            <div class="tech-pill-group">
-              <span class="pill-label">AI &amp; Agents</span>
-              <div class="pills">
-                <span class="pill">Google ADK</span>
-                <span class="pill">Gemini Pro (Supervisor)</span>
-                <span class="pill">Gemini Flash (sub-agents)</span>
-                <span class="pill">A2A protocol v0.3</span>
-                <span class="pill">MCP server (58 tools)</span>
-                <span class="pill">Deterministic NLU fast-path</span>
+          <div class="tech-block">
+            <div class="tech-row">
+              <span class="tech-category">AI &amp; Agents</span>
+              <div class="tech-chips">
+                <span class="chip">Google ADK</span>
+                <span class="chip">Gemini Pro</span>
+                <span class="chip">Gemini Flash</span>
+                <span class="chip">A2A protocol v0.3</span>
+                <span class="chip">MCP (58 tools)</span>
+                <span class="chip">Deterministic NLU</span>
               </div>
             </div>
-
-            <div class="tech-pill-group">
-              <span class="pill-label">Backend &amp; Infra</span>
-              <div class="pills">
-                <span class="pill">Next.js 16 / React 19</span>
-                <span class="pill">TypeScript strict</span>
-                <span class="pill">Postgres (Supabase)</span>
-                <span class="pill">Google Cloud Run</span>
-                <span class="pill">Cloud Tasks (async queues)</span>
-                <span class="pill">Hexagonal architecture</span>
+            <div class="tech-row">
+              <span class="tech-category">Backend &amp; Infra</span>
+              <div class="tech-chips">
+                <span class="chip">Next.js 16</span>
+                <span class="chip">TypeScript strict</span>
+                <span class="chip">Postgres / Supabase</span>
+                <span class="chip">Cloud Run</span>
+                <span class="chip">Cloud Tasks</span>
+                <span class="chip">Hexagonal arch.</span>
               </div>
             </div>
-
-            <div class="tech-pill-group">
-              <span class="pill-label">Integrations</span>
-              <div class="pills">
-                <span class="pill">AFIP/ARCA (e-invoicing)</span>
-                <span class="pill">MercadoPago (payments)</span>
-                <span class="pill">Andreani (logistics)</span>
-                <span class="pill">WhatsApp Business (Meta)</span>
-                <span class="pill">PedidosYa</span>
+            <div class="tech-row">
+              <span class="tech-category">Integrations</span>
+              <div class="tech-chips">
+                <span class="chip chip-live">AFIP / ARCA</span>
+                <span class="chip chip-live">MercadoPago</span>
+                <span class="chip chip-live">Andreani logistics</span>
+                <span class="chip chip-live">WhatsApp (Meta)</span>
+                <span class="chip chip-live">PedidosYa</span>
               </div>
             </div>
-
           </div>
-        </div>
 
-        <div class="arch-note">
-          <span class="arch-icon">⚡</span>
-          <p><strong>Architecture note:</strong> The MCP server is engine-agnostic — the same 58 tools are consumable by Claude, GPT, Gemini, or any MCP-compatible client. Each AI agent carries a cryptographic Ed25519 identity, enabling verified agent-to-agent communication across the A2A bus without a central trust store.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ===== SKILLS ===== -->
   <section id="skills">
     <div class="container">
-      <h2 class="section-label">Skills &amp; stack</h2>
-      <h3 class="section-title">The tools I reach for.</h3>
+      <div class="section-head" data-reveal>
+        <span class="label-tag">Skills &amp; stack</span>
+        <h2 class="section-title">The tools I reach for.</h2>
+      </div>
+
       <div class="skills-grid">
 
-        <div class="skill-group">
-          <h5>AI &amp; Automation</h5>
-          <ul>
+        <div class="skill-col" data-reveal>
+          <h4 class="skill-col-title">AI &amp; Automation</h4>
+          <ul class="skill-list">
             <li>MCP server development</li>
             <li>Multi-agent orchestration (A2A)</li>
             <li>LLM integrations (Gemini, Claude, GPT)</li>
-            <li>Prompt engineering &amp; NLU</li>
-            <li>Workflow automation (webhooks, n8n, cron)</li>
+            <li>Prompt engineering &amp; NLU routing</li>
+            <li>Workflow automation (webhooks, cron)</li>
             <li>WhatsApp Business automation</li>
           </ul>
         </div>
 
-        <div class="skill-group">
-          <h5>Backend &amp; Cloud</h5>
-          <ul>
+        <div class="skill-col" data-reveal>
+          <h4 class="skill-col-title">Backend &amp; Cloud</h4>
+          <ul class="skill-list">
             <li>Next.js / Node.js / TypeScript</li>
             <li>REST APIs &amp; webhook pipelines</li>
             <li>Google Cloud Run &amp; Cloud Tasks</li>
@@ -270,24 +378,24 @@
           </ul>
         </div>
 
-        <div class="skill-group">
-          <h5>Frontend</h5>
-          <ul>
+        <div class="skill-col" data-reveal>
+          <h4 class="skill-col-title">Frontend</h4>
+          <ul class="skill-list">
             <li>React 19 / Next.js App Router</li>
-            <li>Tailwind CSS</li>
+            <li>Tailwind CSS v4</li>
             <li>Mobile via Capacitor (Android)</li>
             <li>Offline-first patterns</li>
           </ul>
         </div>
 
-        <div class="skill-group">
-          <h5>How I work</h5>
-          <ul>
+        <div class="skill-col" data-reveal>
+          <h4 class="skill-col-title">How I work</h4>
+          <ul class="skill-list">
             <li>Remote-first, async-friendly</li>
             <li>Fluent English (written &amp; spoken)</li>
-            <li>Available US &amp; EU business hours</li>
-            <li>Conventional Commits &amp; clean PRs</li>
-            <li>Architecture-first, no spaghetti</li>
+            <li>US &amp; EU business hours available</li>
+            <li>Architecture-first, clean PRs</li>
+            <li>Conventional Commits</li>
           </ul>
         </div>
 
@@ -295,30 +403,348 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ===== CONTACT ===== -->
   <section id="contact">
-    <div class="container contact-container">
-      <h2 class="section-label">Contact</h2>
-      <h3 class="section-title">Let's build something.</h3>
-      <p class="section-sub">Open to freelance projects and contracts. Best fit: teams that need AI actually integrated into their product or operations. USD&nbsp;50–65/h · remote · US &amp; EU clients welcome.</p>
-      <div class="contact-actions">
-        <a href="mailto:gestiones@somosvelora.com?subject=Hire inquiry" class="btn-primary">Hire me — gestiones@somosvelora.com</a>
-        <a href="#services" class="btn-ghost">See pricing ↑</a>
+    <div class="container">
+      <div class="contact-shell" data-reveal>
+        <div class="contact-inner">
+          <span class="label-tag">Contact</span>
+          <h2 class="contact-title">Let's build<br>something real.</h2>
+          <p class="contact-desc">Open to freelance projects and contracts. Best fit: teams that need AI actually integrated into their product or operations.</p>
+          <div class="contact-meta">
+            <span>USD 50–65/h</span>
+            <span class="dot-sep" aria-hidden="true">·</span>
+            <span>Remote</span>
+            <span class="dot-sep" aria-hidden="true">·</span>
+            <span>US &amp; EU clients</span>
+            <span class="dot-sep" aria-hidden="true">·</span>
+            <span>Mendoza, Argentina · UTC-3</span>
+          </div>
+          <a href="mailto:gestiones@somosvelora.com?subject=Hire inquiry" class="btn-cta">
+            <span>Hire me — gestiones@somosvelora.com</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3.5 9h11m0 0L10 4.5M14.5 9L10 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <!-- Decorative grid -->
+        <div class="contact-deco" aria-hidden="true">
+          <div class="deco-grid"></div>
+        </div>
       </div>
-      <p class="contact-note">Mendoza, Argentina · Remote · UTC-3 · USD</p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <span>Carlos Rossi · MCP &amp; AI-Agent Developer</span>
-      <span class="footer-links">
+      <span class="footer-id">Carlos Rossi · MCP &amp; AI-Agent Developer</span>
+      <nav class="footer-nav" aria-label="Footer links">
         <a href="https://somosvelora.com" target="_blank" rel="noopener">Velora</a>
         <a href="https://github.com/crossi-dev" target="_blank" rel="noopener">GitHub</a>
-      </span>
+        <a href="mailto:gestiones@somosvelora.com">Email</a>
+      </nav>
     </div>
   </footer>
 
+  <script>
+  // ── CANVAS BACKGROUND ──────────────────────────────────────────
+  (function () {
+    const canvas = document.getElementById('heroCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [], animFrame;
+
+    const COLORS = [
+      'rgba(99,102,241,',   // indigo
+      'rgba(139,92,246,',   // violet
+      'rgba(20,184,166,',   // teal
+    ];
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+
+    function Particle() {
+      this.reset = function () {
+        this.x  = Math.random() * W;
+        this.y  = Math.random() * H;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3;
+        this.r  = Math.random() * 1.5 + 0.5;
+        this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+        this.alpha = Math.random() * 0.5 + 0.1;
+        this.life  = Math.random() * 200 + 100;
+        this.age   = 0;
+      };
+      this.reset();
+    }
+
+    function initParticles(n) {
+      particles = [];
+      for (let i = 0; i < n; i++) {
+        const p = new Particle();
+        p.age = Math.floor(Math.random() * p.life); // stagger
+        particles.push(p);
+      }
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+
+      // draw connections
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            const alpha = (1 - dist / 120) * 0.08;
+            ctx.strokeStyle = `rgba(139,92,246,${alpha})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // draw nodes
+      particles.forEach(p => {
+        const fade = Math.min(p.age / 30, 1) * Math.min((p.life - p.age) / 30, 1);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color + (p.alpha * fade) + ')';
+        ctx.fill();
+
+        p.x += p.vx;
+        p.y += p.vy;
+        p.age++;
+
+        if (p.age >= p.life || p.x < 0 || p.x > W || p.y < 0 || p.y > H) {
+          p.reset();
+        }
+      });
+
+      animFrame = requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', () => {
+      resize();
+      initParticles(Math.floor((W * H) / 12000));
+    });
+
+    resize();
+    initParticles(Math.floor((W * H) / 12000));
+    draw();
+
+    // pause when not visible
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) cancelAnimationFrame(animFrame);
+      else draw();
+    });
+
+    // respect prefers-reduced-motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      cancelAnimationFrame(animFrame);
+      canvas.style.opacity = '0';
+    }
+  })();
+
+  // ── SCROLL COUNTER ANIMATION ──────────────────────────────────
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.count, 10);
+    if (!target) return;
+    const duration = 1200;
+    const start = performance.now();
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(ease * target);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ── MOBILE NAV ────────────────────────────────────────────────
+  const toggle = document.querySelector('.nav-mobile-toggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ── NAV SCROLL STATE ─────────────────────────────────────────
+  const navEl = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('nav-scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // ── GSAP ANIMATIONS (if available) ───────────────────────────
+  window.addEventListener('load', () => {
+    if (typeof gsap === 'undefined') {
+      // Fallback: just show everything
+      document.querySelectorAll('[data-reveal], [data-reveal-line]').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+      document.querySelectorAll('[data-count]').forEach(animateCounter);
+      return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero lines stagger
+    gsap.fromTo('[data-reveal-line]',
+      { y: 80, opacity: 0, skewY: 3 },
+      {
+        y: 0, opacity: 1, skewY: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        stagger: 0.12,
+        delay: 0.1,
+        clearProps: 'all'
+      }
+    );
+
+    // Hero other elements
+    gsap.fromTo('[data-reveal]',
+      { y: 40, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: 0.75,
+        ease: 'power2.out',
+        stagger: 0.08,
+        delay: 0.55,
+        clearProps: 'all'
+      }
+    );
+
+    // Counter animation on hero stats
+    document.querySelectorAll('[data-count]').forEach(el => {
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 85%',
+        once: true,
+        onEnter: () => animateCounter(el)
+      });
+    });
+
+    // Scroll-reveal for all sections
+    gsap.utils.toArray('section:not(#hero) [data-reveal]').forEach((el, i) => {
+      gsap.fromTo(el,
+        { y: 50, opacity: 0 },
+        {
+          y: 0, opacity: 1,
+          duration: 0.7,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            once: true
+          },
+          delay: (i % 4) * 0.07,
+          clearProps: 'all'
+        }
+      );
+    });
+
+    // Pricing cards stagger
+    gsap.utils.toArray('.pricing-card').forEach((el, i) => {
+      gsap.fromTo(el,
+        { y: 60, opacity: 0 },
+        {
+          y: 0, opacity: 1,
+          duration: 0.75,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            once: true
+          },
+          delay: i * 0.12,
+          clearProps: 'all'
+        }
+      );
+    });
+
+    // Cap tiles stagger
+    gsap.utils.toArray('.cap-tile').forEach((el, i) => {
+      gsap.fromTo(el,
+        { y: 50, opacity: 0, scale: 0.97 },
+        {
+          y: 0, opacity: 1, scale: 1,
+          duration: 0.65,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 90%',
+            once: true
+          },
+          delay: i * 0.09,
+          clearProps: 'all'
+        }
+      );
+    });
+
+    // Metric cards stagger
+    gsap.utils.toArray('.metric-card').forEach((el, i) => {
+      gsap.fromTo(el,
+        { scale: 0.9, opacity: 0 },
+        {
+          scale: 1, opacity: 1,
+          duration: 0.55,
+          ease: 'back.out(1.4)',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 90%',
+            once: true
+          },
+          delay: i * 0.07,
+          clearProps: 'all'
+        }
+      );
+    });
+
+    // Skill cols
+    gsap.utils.toArray('.skill-col').forEach((el, i) => {
+      gsap.fromTo(el,
+        { x: -30, opacity: 0 },
+        {
+          x: 0, opacity: 1,
+          duration: 0.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            once: true
+          },
+          delay: i * 0.08,
+          clearProps: 'all'
+        }
+      );
+    });
+
+    // Project shell parallax
+    gsap.to('.project-shell', {
+      scrollTrigger: {
+        trigger: '#project',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1
+      },
+      y: -30
+    });
+
+  });
+  </script>
 </body>
 </html>
