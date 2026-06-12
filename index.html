@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Rossi — AI Builder</title>
+  <meta name="description" content="Carlos Rossi builds AI-native systems: MCP servers, multi-agent orchestration, and business automation. Available for remote projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Carlos Rossi</span>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#project">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="btn-nav">Let's talk</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-badge">Available for remote work</div>
+      <h1>I build AI&#8209;native systems<br>that actually work in production.</h1>
+      <p class="hero-sub">
+        MCP servers, multi-agent pipelines, LLM integrations, business automation.
+        Based in Mendoza, Argentina — working with clients in US&nbsp;&amp;&nbsp;EU.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Get in touch</a>
+        <a href="#project" class="btn-ghost">See my work ↓</a>
+      </div>
+      <div class="hero-proof">
+        <span>🤖 MCP server in production</span>
+        <span>⚡ Multi-agent A2A orchestration</span>
+        <span>☁️ Google Cloud Run</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-label">What I do</h2>
+      <h3 class="section-title">I bridge AI models and real business systems.</h3>
+      <p class="section-sub">Not demos or prototypes. Production-grade pipelines that handle real data and real workflows.</p>
+      <div class="services-grid">
+
+        <div class="card">
+          <div class="card-icon">🔌</div>
+          <h4>Custom MCP Servers</h4>
+          <p>I build Model Context Protocol servers that connect your AI assistant (Claude, GPT, Gemini) to your existing tools, APIs, and databases. Your AI stops being a chatbot and starts being an operator.</p>
+          <ul class="card-list">
+            <li>Tool design &amp; schema</li>
+            <li>Auth, rate-limiting, multi-tenant</li>
+            <li>Deployment on Cloud Run or any host</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🕸️</div>
+          <h4>Multi-Agent Pipelines</h4>
+          <p>Orchestration systems where specialized agents collaborate: one handles payments, one handles logistics, one handles invoicing. I wire them together over A2A protocols with cryptographic identity per agent.</p>
+          <ul class="card-list">
+            <li>Google ADK / ADK sub-agents</li>
+            <li>A2A protocol (agent-to-agent)</li>
+            <li>Supervisor + specialist pattern</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <h4>Business Automation</h4>
+          <p>End-to-end automation that replaces manual workflows: inbound WhatsApp → AI triage → action → confirmation. Scheduled jobs, webhook pipelines, async task queues — the full stack.</p>
+          <ul class="card-list">
+            <li>WhatsApp Business (Meta Cloud API)</li>
+            <li>Webhook pipelines + Cloud Tasks</li>
+            <li>n8n, scheduled jobs, cron</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🧩</div>
+          <h4>LLM Integrations</h4>
+          <p>Drop an LLM into your existing product: intent routing, NLU, structured extraction, AI-assisted decisions. I handle model selection, prompt engineering, fallback chains, and cost control.</p>
+          <ul class="card-list">
+            <li>Gemini, Claude, GPT integrations</li>
+            <li>Deterministic-first / LLM-fallback</li>
+            <li>Token budgeting &amp; latency tuning</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT -->
+  <section id="project">
+    <div class="container">
+      <h2 class="section-label">Featured project</h2>
+      <div class="project-card">
+        <div class="project-header">
+          <div>
+            <span class="project-tag">Production · Live</span>
+            <h3 class="project-title">Velora</h3>
+            <p class="project-tagline">AI-native commerce platform with a full MCP server and A2A multi-agent backbone.</p>
+          </div>
+          <div class="project-links">
+            <a href="https://somosvelora.com" target="_blank" rel="noopener" class="btn-outline">Visit site ↗</a>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <div class="case-block">
+            <h5>The problem</h5>
+            <p>Small and mid-size businesses in Argentina run on a tangle of WhatsApp messages, spreadsheets, and manual steps. Every sale, invoice, shipment, and payment requires a person to coordinate across 4–5 disconnected systems. The bottleneck is human coordination — and it doesn't scale.</p>
+          </div>
+          <div class="case-block">
+            <h5>What I built</h5>
+            <p>A chat-first, AI-native commerce platform where the owner manages the entire business through conversation. The system routes each intent to the right specialized agent, which executes the action end-to-end: register a sale, issue an electronic invoice, dispatch a shipment, collect payment — all from a single chat interface.</p>
+          </div>
+        </div>
+
+        <div class="tech-highlights">
+          <div class="highlight">
+            <span class="highlight-num">58</span>
+            <span class="highlight-label">MCP tools in production</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-num">12+</span>
+            <span class="highlight-label">specialized AI agents</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-num">A2A</span>
+            <span class="highlight-label">cryptographic agent identity</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-num">4</span>
+            <span class="highlight-label">real integrations</span>
+          </div>
+        </div>
+
+        <div class="tech-section">
+          <h5>Technical breakdown</h5>
+          <div class="tech-pills-grid">
+
+            <div class="tech-pill-group">
+              <span class="pill-label">AI &amp; Agents</span>
+              <div class="pills">
+                <span class="pill">Google ADK</span>
+                <span class="pill">Gemini Pro (Supervisor)</span>
+                <span class="pill">Gemini Flash (sub-agents)</span>
+                <span class="pill">A2A protocol v0.3</span>
+                <span class="pill">MCP server (58 tools)</span>
+                <span class="pill">Deterministic NLU fast-path</span>
+              </div>
+            </div>
+
+            <div class="tech-pill-group">
+              <span class="pill-label">Backend &amp; Infra</span>
+              <div class="pills">
+                <span class="pill">Next.js 16 / React 19</span>
+                <span class="pill">TypeScript strict</span>
+                <span class="pill">Postgres (Supabase)</span>
+                <span class="pill">Google Cloud Run</span>
+                <span class="pill">Cloud Tasks (async queues)</span>
+                <span class="pill">Hexagonal architecture</span>
+              </div>
+            </div>
+
+            <div class="tech-pill-group">
+              <span class="pill-label">Integrations</span>
+              <div class="pills">
+                <span class="pill">AFIP/ARCA (e-invoicing)</span>
+                <span class="pill">MercadoPago (payments)</span>
+                <span class="pill">Andreani (logistics)</span>
+                <span class="pill">WhatsApp Business (Meta)</span>
+                <span class="pill">PedidosYa</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="arch-note">
+          <span class="arch-icon">⚡</span>
+          <p><strong>Architecture note:</strong> The MCP server is engine-agnostic — the same 58 tools are consumable by Claude, GPT, Gemini, or any MCP-compatible client. Each AI agent carries a cryptographic Ed25519 identity, enabling verified agent-to-agent communication across the A2A bus without a central trust store.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-label">Skills &amp; stack</h2>
+      <h3 class="section-title">The tools I reach for.</h3>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h5>AI &amp; Automation</h5>
+          <ul>
+            <li>MCP server development</li>
+            <li>Multi-agent orchestration (A2A)</li>
+            <li>LLM integrations (Gemini, Claude, GPT)</li>
+            <li>Prompt engineering &amp; NLU</li>
+            <li>Workflow automation (webhooks, n8n, cron)</li>
+            <li>WhatsApp Business automation</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h5>Backend &amp; Cloud</h5>
+          <ul>
+            <li>Next.js / Node.js / TypeScript</li>
+            <li>REST APIs &amp; webhook pipelines</li>
+            <li>Google Cloud Run &amp; Cloud Tasks</li>
+            <li>Postgres &amp; Prisma ORM</li>
+            <li>Async task queues</li>
+            <li>Auth (OAuth 2.1, HMAC, JWT)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h5>Frontend</h5>
+          <ul>
+            <li>React 19 / Next.js App Router</li>
+            <li>Tailwind CSS</li>
+            <li>Mobile via Capacitor (Android)</li>
+            <li>Offline-first patterns</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h5>How I work</h5>
+          <ul>
+            <li>Remote-first, async-friendly</li>
+            <li>Fluent English (written &amp; spoken)</li>
+            <li>Available US &amp; EU business hours</li>
+            <li>Conventional Commits &amp; clean PRs</li>
+            <li>Architecture-first, no spaghetti</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-container">
+      <h2 class="section-label">Contact</h2>
+      <h3 class="section-title">Let's build something.</h3>
+      <p class="section-sub">I'm open to freelance projects, contracts, and early-stage collaborations. The best fit: teams that need AI actually integrated into their product or operations, not just slapped on top.</p>
+      <div class="contact-actions">
+        <a href="mailto:gestiones@somosvelora.com" class="btn-primary">gestiones@somosvelora.com</a>
+        <a href="https://www.linkedin.com/in/[PENDING]" target="_blank" rel="noopener" class="btn-ghost">LinkedIn ↗</a>
+      </div>
+      <p class="contact-note">Mendoza, Argentina · Remote · UTC-3</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span>Carlos Rossi · AI Builder</span>
+      <span class="footer-links">
+        <a href="https://somosvelora.com" target="_blank" rel="noopener">Velora</a>
+        <a href="https://github.com/crossi-dev" target="_blank" rel="noopener">GitHub</a>
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>
