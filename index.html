@@ -67,6 +67,7 @@
       <a href="#top" class="nav-mark" aria-label="Charles Rossi — home">Charles&nbsp;Rossi</a>
       <div class="nav-links">
         <a href="#work">Work</a>
+        <a href="#shipped">Projects</a>
         <a href="#stack">Stack</a>
         <a href="#background">Background</a>
         <a href="#contact">Contact</a>
@@ -142,7 +143,7 @@
         <div class="browser">
           <div class="browser-bar">
             <span class="tl"></span><span class="tl"></span><span class="tl"></span>
-            <span class="url mono">somosvelora.com</span>
+            <a class="url mono" href="https://somosvelora.com" target="_blank" rel="noopener">somosvelora.com</a>
           </div>
           <img
             src="assets/velora-integrations.png"
@@ -162,7 +163,7 @@
           <div class="browser">
             <div class="browser-bar">
               <span class="tl"></span><span class="tl"></span><span class="tl"></span>
-              <span class="url mono">somosvelora.com</span>
+              <a class="url mono" href="https://somosvelora.com" target="_blank" rel="noopener">somosvelora.com</a>
             </div>
             <img
               src="assets/velora-landing-desktop.png"
@@ -213,8 +214,89 @@
       </div>
 
       <div class="case-actions" data-reveal>
-        <a class="btn btn-on-dark" href="https://github.com/crossi-dev" target="_blank" rel="noopener">See the code ↗</a>
-        <a class="btn btn-ghost on-dark" href="https://github.com/crossi-dev" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-on-dark" href="https://somosvelora.com" target="_blank" rel="noopener">Open the live product ↗</a>
+        <!-- DEMO VIDEO: owner to supply the real URL, then this button goes live.
+             If preferred as an inline embed, replace the button with a responsive
+             16:9 <iframe> using the same URL. Placeholder is intentional. -->
+        <a class="btn btn-ghost on-dark" href="{{YOUTUBE_DEMO_URL — owner to supply}}" target="_blank" rel="noopener">▶ Watch the demo</a>
+        <a class="btn btn-ghost on-dark" href="https://github.com/crossi-dev/velora-mcp" target="_blank" rel="noopener">velora-mcp on GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ ALSO SHIPPED ============================ -->
+  <section class="section divider-top" id="shipped">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title" data-reveal>Also shipped</h2>
+        <p class="section-sub" data-reveal>
+          Public, verifiable pieces of the same stack — each one live and callable
+          by any MCP client, not a slide.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">velora-mcp</h3>
+            <span class="badge badge-green"><span class="badge-dot"></span>Production</span>
+          </div>
+          <p class="card-desc">
+            The Argentine commerce MCP server behind Velora: real AFIP/ARCA invoicing
+            (live CAE), MercadoPago, logistics, catalog and WhatsApp — 61 tools across
+            14 packs behind one HMAC-authenticated, multi-tenant endpoint.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://github.com/crossi-dev/velora-mcp" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="link-arrow" href="https://tools.somosvelora.com" target="_blank" rel="noopener">tools.somosvelora.com ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">Public MCP endpoint</h3>
+            <span class="badge badge-green"><span class="badge-dot"></span>Live · no auth</span>
+          </div>
+          <p class="card-desc">
+            <span class="mono">tools.somosvelora.com/api/mcp/public</span> — 9 pure Argentine
+            fiscal tools (CUIT/CUIL/CBU validation, AFIP QR, IVA split, ARS parsing) that
+            any AI agent can call with no key, no account, no install.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://tools.somosvelora.com" target="_blank" rel="noopener">tools.somosvelora.com ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">latam-tools</h3>
+            <span class="badge">MCP registry</span>
+          </div>
+          <p class="card-desc">
+            The pure, no-auth fiscal tools published as a standalone MCP server manifest —
+            registered so any MCP-compatible client can discover and connect over
+            Streamable HTTP.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://github.com/crossi-dev/latam-tools" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">velora-track3</h3>
+            <span class="badge">Google AI Agents Challenge</span>
+          </div>
+          <p class="card-desc">
+            The multi-agent orchestration layer: a Supervisor plus 8 A2A sub-agents
+            (Ed25519-signed) on Google ADK, Vertex AI and Cloud Run — Velora's entry in
+            Google's international AI agent competition.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://github.com/crossi-dev/velora-track3" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="link-arrow" href="https://github.com/crossi-dev" target="_blank" rel="noopener">All repos ↗</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
