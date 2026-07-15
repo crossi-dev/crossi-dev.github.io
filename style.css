@@ -427,6 +427,13 @@ h1, h2, h3, h4, p { margin: 0; }
   text-wrap: pretty;
 }
 .card-meta { font-size: 0.875rem; color: var(--color-ink-60); margin-top: auto; }
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin-top: auto;
+}
+.card-desc .mono { font-size: 0.9375rem; color: var(--color-ink); word-break: break-word; }
 
 /* ============================================================
    CASE STUDY — Velora, dark navy band (deck hero treatment)
