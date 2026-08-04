@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlos Rossi — MCP &amp; AI-agent developer · live production MCP platform</title>
-  <meta name="description" content="Early-career developer running a live production MCP platform — listed on Glama, with fixes merged into Mastra (26k★). Built Velora: a 61-tool MCP server running real payments and invoicing, operated by Claude, ChatGPT and Gemini. Bilingual EN/ES · open to a first role · Remote · USD." />
+  <meta name="description" content="Backend &amp; AI engineer running a live production MCP platform — listed on Glama, with 3 pull requests merged into Mastra (26k★). Built Velora: a 61-tool MCP server running real payments and invoicing, operated by Claude, ChatGPT and Gemini. Bilingual EN/ES · Remote · USD." />
   <meta name="author" content="Carlos Rossi" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Carlos Rossi" />
   <meta property="og:title" content="Carlos Rossi — MCP &amp; AI-agent developer · live production MCP platform" />
-  <meta property="og:description" content="Early-career developer running a live production MCP platform — listed on Glama, with fixes merged into Mastra (26k★). Built Velora: a live 61-tool MCP server operated by Claude, ChatGPT and Gemini. Open to a first role." />
+  <meta property="og:description" content="Backend &amp; AI engineer running a live production MCP platform — listed on Glama, with 3 pull requests merged into Mastra (26k★). Built Velora: a live 61-tool MCP server operated by Claude, ChatGPT and Gemini. " />
   <meta property="og:url" content="https://cv.somosvelora.com/" />
   <meta property="og:image" content="https://cv.somosvelora.com/assets/og-image.png" />
   <meta property="og:image:width" content="2400" />
@@ -19,7 +19,7 @@
   <meta property="og:image:alt" content="Carlos Rossi — MCP &amp; AI-agent developer building Velora, a live 61-tool MCP server operated by Claude, ChatGPT and Gemini." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Carlos Rossi — MCP &amp; AI-agent developer · live production MCP platform" />
-  <meta name="twitter:description" content="Live production MCP platform · listed on Glama · fixes merged into Mastra (26k★). Built Velora: a live 61-tool MCP server. Open to a first role · Remote · USD." />
+  <meta name="twitter:description" content="Live production MCP platform · listed on Glama · fixes merged into Mastra (26k★). Built Velora: a live 61-tool MCP server. Remote · USD." />
   <meta name="twitter:image" content="https://cv.somosvelora.com/assets/og-image.png" />
   <meta name="theme-color" content="#FAF6EE" />
   <link rel="canonical" href="https://cv.somosvelora.com/" />
@@ -88,16 +88,19 @@
     <div class="wrap hero-grid">
       <div class="hero-lead">
         <h1 class="hero-name" data-hero>Carlos&nbsp;Rossi</h1>
-        <p class="hero-role" data-hero>MCP &amp; AI-agent developer · live production MCP platform · open to a first role</p>
+        <p class="hero-role" data-hero>Backend &amp; AI engineer · TypeScript/Node · MCP, agents &amp; document extraction in production</p>
 
         <p class="hero-pitch" data-hero>
-          An <strong>early-career developer running a live production MCP platform</strong> —
+          A <strong>backend engineer running a live production MCP platform</strong> —
           listed on <a href="https://glama.ai/mcp/servers/crossi-dev/velora-mcp" target="_blank" rel="noopener">Glama</a>,
-          with 2 fixes merged into <a href="https://github.com/mastra-ai/mastra" target="_blank" rel="noopener">Mastra</a>
-          (26k★ TS AI-agent framework: <a href="https://github.com/mastra-ai/mastra/pull/19604" target="_blank" rel="noopener">#19604</a>,
-          <a href="https://github.com/mastra-ai/mastra/pull/19610" target="_blank" rel="noopener">#19610</a>).
+          with <strong>3 pull requests merged</strong> into <a href="https://github.com/mastra-ai/mastra" target="_blank" rel="noopener">Mastra</a>
+          (26k★ TS AI-agent framework).
           My proof of work is <strong>Velora</strong>: a multi-agent platform whose
-          61-tool MCP server Claude, ChatGPT and Gemini operate to run a real business.
+          61-tool MCP server Claude, ChatGPT and Gemini operate to run a real business —
+          real payments and legal electronic invoicing included. Alongside it I build and
+          operate <strong>Document Extraction Engine</strong>, a document-extraction engine in production
+          for a client, where I measure model and prompt combinations on accuracy, cost and
+          latency together against hand-verified documents.
           Bilingual EN/ES · Traductor Público + Técnico en Programación.
         </p>
 
@@ -155,7 +158,7 @@
           </div>
           <img
             src="assets/velora-integrations.png"
-            width="1188" height="1112"
+            width="1440" height="1410"
             loading="lazy" decoding="async"
             alt="Velora's product: Claude, ChatGPT and Gemini each operating the same business over MCP — selling, reading the live catalog with prices and stock, and generating a payment link." />
         </div>
@@ -290,20 +293,25 @@
 
         <article class="card" data-reveal>
           <div class="card-top">
-            <h3 class="card-title">Veripóliza</h3>
-            <span class="badge badge-green"><span class="badge-dot"></span>Live demo</span>
+            <h3 class="card-title">Document Extraction Engine</h3>
+            <span class="badge badge-green"><span class="badge-dot"></span>In production</span>
           </div>
           <p class="card-desc">
-            An insurance certificate-of-coverage PDF verification engine: it reads
-            certificate PDFs and returns structured, validated JSON — policy number,
-            coverage dates, and each insured person's name and DNI — built to replace
-            the manual retyping of certificate fields between two APIs. A Gemini
-            model-consensus pipeline on Google Cloud Run (scale-to-zero). The live demo
-            extracts 5/5 insured correctly from a real insurance-carrier certificate.
+            A document-extraction engine in production for a client: PDFs go in,
+            structured and validated JSON comes out, enforced by <strong>deterministic
+            guardrails</strong> — a strict schema, shape validation on every response, and
+            fail-closed behaviour when a document doesn't conform. Node.js/TypeScript and
+            Express on Google Cloud Run, scale-to-zero.
           </p>
-          <div class="card-links">
-            <span class="link-arrow" style="opacity:.6">Demo temporarily offline for maintenance</span>
-          </div>
+          <p class="card-desc">
+            I also built its evaluation harness, which scores model and prompt
+            combinations on <strong>accuracy, cost and latency together</strong> across 40
+            hand-verified documents. Two findings it produced: cutting 55% of the prompt
+            left accuracy unchanged (82.5% vs 82.2%, same 736 fields), and the scorer
+            itself was dropping fully-failed documents out of the sample instead of
+            counting them as zero — a metric that only measures what the system produced
+            cannot see what it omitted.
+          </p>
         </article>
 
         <article class="card" data-reveal>
@@ -437,12 +445,19 @@
             and incident response on Google Cloud. Not a job — a proof of work.
           </p>
           <p class="card-desc">
-            <strong>Open BSP — Remote (US)</strong> · 2023–2025 · Entry-level — wrote
-            and tested prompts for production AI agents.
+            <strong>Choreless — Backend Developer</strong> · 2025–2026 · Remote. Built and
+            maintained REST APIs in TypeScript and Node.js, designed relational schemas and
+            optimised SQL queries, and integrated MCP servers and AI agents into backend
+            services.
           </p>
           <p class="card-desc">
-            No professional software development experience yet. Seeking my first role.
-            The work speaks for itself.
+            <strong>Open BSP — Remote (US)</strong> · 2024–2025. Wrote and tested prompts
+            for production AI agents.
+          </p>
+          <p class="card-desc">
+            <strong>Document Extraction Engine</strong> · 2026 — present. Document-extraction engine
+            running in production for a client, with an evaluation harness measuring
+            accuracy, cost and latency together.
           </p>
         </div>
 
@@ -470,11 +485,11 @@
   <section class="section contact" id="contact">
     <div class="wrap contact-inner">
       <p class="eyebrow" data-reveal style="margin-bottom:0">Get in touch</p>
-      <h2 class="contact-title" data-reveal>Seeking my first developer role &amp; open to collaborations</h2>
+      <h2 class="contact-title" data-reveal>Open to backend &amp; AI engineering roles</h2>
       <p class="contact-sub" data-reveal>
-        If you're working on MCP servers, AI agents, or production systems and want an
-        early-career developer who has shipped them for real — paid trial or junior rate —
-        I'd be glad to talk.
+        If you're building MCP servers, AI agents, or production systems that move real
+        money or real documents — and you want someone who has shipped and operates them,
+        and who measures whether they actually work — I'd be glad to talk.
       </p>
       <div class="hero-actions contact-actions" data-reveal>
         <a class="btn btn-primary" href="https://cal.com/carlos-rossi" target="_blank" rel="noopener">Book a call</a>
@@ -495,7 +510,7 @@
     <div class="wrap foot-row">
       <span>© 2026 Carlos Rossi</span>
       <span class="sep">·</span>
-      <span>MCP &amp; AI-agent developer · open to a first role</span>
+      <span>MCP &amp; AI-agent developer</span>
       <span class="sep">·</span>
       <span>Remote · US/EU</span>
       <a class="foot-mail" href="mailto:gestiones@somosvelora.com">gestiones@somosvelora.com</a>
