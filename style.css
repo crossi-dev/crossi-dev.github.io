@@ -18,10 +18,14 @@
   /* ink ramp (navy at decreasing opacity) */
   --color-ink: #1B3A6B;
   --color-ink-80: rgba(27, 58, 107, 0.80);
-  --color-ink-60: rgba(27, 58, 107, 0.60);
+  /* 0.60 computed to 3.47:1 on cream — below the 4.5:1 minimum for the
+     13-14px text that uses it. 0.72 measures ~4.6:1. */
+  --color-ink-60: rgba(27, 58, 107, 0.72);
   --color-ink-40: rgba(27, 58, 107, 0.40);
   --color-line: rgba(27, 58, 107, 0.12);
-  --color-line-strong: rgba(27, 58, 107, 0.22);
+  /* Interactive borders need 3:1; 0.22 gave 1.49:1. */
+  --color-line-strong: rgba(27, 58, 107, 0.38);
+  --color-focus: #1B3A6B;
   --color-tint: rgba(27, 58, 107, 0.04);
   --color-tint-2: rgba(27, 58, 107, 0.07);
 
@@ -33,7 +37,7 @@
   --color-cream-line: rgba(250, 246, 238, 0.14);
 
   /* accent — Velora "market closing" green for money/positive proof */
-  --color-green: #2D7D5F;
+  --color-green: #22624A;   /* was #2D7D5F = 4.17:1 on the soft green; this is ~6:1 */
   --color-green-soft: #E0EEE7;
   --color-green-on-dark: #7FCFA3;
 
@@ -212,9 +216,28 @@ h1, h2, h3, h4, p { margin: 0; }
 .btn-ghost.on-dark { color: var(--color-cream); border-color: var(--color-cream-line); }
 .btn-ghost.on-dark:hover { background: rgba(250, 246, 238, 0.08); }
 
-.btn:focus-visible {
-  outline: 2px solid currentColor;
+/* Focus ring: a dedicated token, never currentColor — on .btn-primary and
+   .btn-on-dark currentColor equals the surrounding background, which made the
+   ring invisible on every primary call to action. */
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.nav-mark:focus-visible,
+.link-arrow:focus-visible,
+.hero-pitch a:focus-visible,
+.foot-mail:focus-visible,
+.browser-bar .url:focus-visible,
+.skip-link:focus-visible,
+.copy-email:focus-visible {
+  outline: 2px solid var(--color-focus);
   outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Navy ring would vanish on the navy case band. */
+.case .btn:focus-visible,
+.case a:focus-visible,
+.btn-on-dark:focus-visible,
+.btn-ghost.on-dark:focus-visible {
+  outline-color: var(--color-cream);
 }
 
 /* small text link with arrow (Velora surface-card CTA) */
@@ -291,8 +314,22 @@ h1, h2, h3, h4, p { margin: 0; }
   letter-spacing: -0.01em;
   color: var(--color-ink);
 }
-.nav-links { display: none; gap: 2.25rem; }
-@media (min-width: 760px) { .nav-links { display: flex; } }
+/* Below 760px the links used to be display:none with no replacement, so phones
+   got no navigation at all. They now scroll horizontally instead. */
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin-inline: 0.75rem;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a { white-space: nowrap; }
+@media (min-width: 760px) {
+  .nav-links { gap: 2.25rem; overflow-x: visible; margin-inline: 0; }
+}
 .nav-links a {
   font-size: 0.9375rem;
   color: var(--color-ink-80);
@@ -490,7 +527,7 @@ h1, h2, h3, h4, p { margin: 0; }
   background: var(--color-bg-deep);
   padding: clamp(24px, 3vw, 34px);
 }
-.case-cell h4 {
+.case-cell h3 {
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 1.2rem;
@@ -507,7 +544,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .stack-groups { display: grid; gap: clamp(28px, 4vw, 40px); }
 @media (min-width: 820px) { .stack-groups { grid-template-columns: 1fr 1fr; } }
 .stack-group { border-top: 1px solid var(--color-line); padding-top: 1.6rem; }
-.stack-group h4 {
+.stack-group h3 {
   font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
