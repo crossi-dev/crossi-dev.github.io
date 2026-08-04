@@ -362,12 +362,15 @@ h1, h2, h3, h4, p { margin: 0; }
 @media (min-width: 940px) {
   .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(300px, 440px); }
 }
+/* The name was the largest thing on the page and is the least differentiating
+   content on it. It now reads as a label; .hero-role — what he actually does —
+   carries the display weight instead. */
 .hero-name {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(3.4rem, 9vw, 7rem);
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--color-ink);
 }
 .hero-role {
@@ -375,10 +378,10 @@ h1, h2, h3, h4, p { margin: 0; }
   font-style: italic;
   font-weight: 500;
   font-size: clamp(1.5rem, 4vw, 2.6rem);
-  line-height: 1.04;
+  line-height: 1.12;
   letter-spacing: -0.015em;
-  color: var(--color-ink-80);
-  margin-top: 0.55rem;
+  color: var(--color-ink);
+  margin-top: 0.7rem;
 }
 .hero-pitch {
   max-width: 40ch;
@@ -566,13 +569,19 @@ h1, h2, h3, h4, p { margin: 0; }
 .chip:hover { border-color: var(--color-line-strong); color: var(--color-ink); transform: translateY(-2px); }
 
 /* ============================================================
-   CONTACT — closing band on tint (Velora ClosingCTA)
+   CONTACT — closing band on deep navy (Velora ClosingCTA)
+   --color-tint is 4% navy over cream: the closing call to action was
+   visually indistinguishable from the page background and carried no
+   weight. It now lands on the same navy ground as the case band.
    ============================================================ */
 .contact {
-  background: var(--color-tint);
+  background: var(--color-bg-deep);
   border-top: 1px solid var(--color-line);
   text-align: center;
 }
+.contact .contact-title { color: var(--color-cream); }
+.contact .contact-sub { color: var(--color-cream-80); }
+.contact .contact-meta { color: var(--color-cream-60); }
 .contact-inner { display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
 .contact-title {
   font-family: var(--font-serif);
@@ -718,6 +727,9 @@ footer {
   color: var(--color-cream-60);
   letter-spacing: 0.03em;
 }
+/* <picture> is inline by default; without this it adds a line box under the
+   screenshot inside the frame. */
+.browser picture, .device picture { display: block; }
 .browser img { width: 100%; height: auto; display: block; }
 
 /* secondary pair: desktop browser + phone device */
