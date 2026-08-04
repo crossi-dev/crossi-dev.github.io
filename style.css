@@ -318,6 +318,10 @@ h1, h2, h3, h4, p { margin: 0; }
    got no navigation at all. They now scroll horizontally instead. */
 .nav-links {
   display: flex;
+  /* Without flex/min-width the CTA wins the space fight and the links get
+     clipped to one item at 390px. */
+  flex: 1 1 auto;
+  min-width: 0;
   gap: 1.25rem;
   overflow-x: auto;
   scrollbar-width: none;
@@ -336,7 +340,7 @@ h1, h2, h3, h4, p { margin: 0; }
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--color-ink); }
-.nav-cta { display: inline-flex; align-items: center; }
+.nav-cta { display: inline-flex; align-items: center; flex: 0 0 auto; }
 .nav-cta .btn { min-height: 42px; padding: 0 1.25rem; font-size: 0.9375rem; }
 
 /* ============================================================
@@ -359,6 +363,12 @@ h1, h2, h3, h4, p { margin: 0; }
   gap: clamp(40px, 5vw, 72px);
   align-items: center;
 }
+/* The terminal card's rows are nowrap, so without min-width:0 the single
+   column at phone widths grows to the widest row and the hero text gets
+   clipped by .hero { overflow: hidden }. */
+.hero-grid > * { min-width: 0; }
+.hero-card-body { overflow-x: auto; scrollbar-width: none; }
+.hero-card-body::-webkit-scrollbar { display: none; }
 @media (min-width: 940px) {
   .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(300px, 440px); }
 }
