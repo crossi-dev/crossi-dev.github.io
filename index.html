@@ -584,7 +584,13 @@
       else document.addEventListener("DOMContentLoaded", startMotion);
 
       setTimeout(function () {
-        document.querySelectorAll("[data-reveal], [data-hero]").forEach(function (el) {
+        var els = document.querySelectorAll("[data-reveal], [data-hero]");
+        // A stalled tween (e.g. rAF paused while the tab is backgrounded) keeps
+        // writing inline opacity/transform, silently undoing this failsafe.
+        // Kill any in-flight tweens on these elements first so the cleared
+        // styles actually stick.
+        if (window.gsap) gsap.killTweensOf(els);
+        els.forEach(function (el) {
           el.classList.add("is-in");
           el.style.opacity = "";
           el.style.transform = "";
