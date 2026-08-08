@@ -605,6 +605,13 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .contact-sub { max-width: 52ch; color: var(--color-ink-80); font-size: 1.0625rem; line-height: 1.6; }
 .contact-meta { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.875rem; color: var(--color-ink-60); margin-top: 0.4rem; }
+/* On short viewports the fixed #nav (73px) can overlap .contact-title when the
+   page is scrolled to its true bottom, because .contact's bottom padding is
+   sized off viewport WIDTH (12vw) and stays large even when height is small.
+   Shrink it with a height-aware clamp so the title always clears the nav. */
+@media (max-height: 800px) {
+  .contact { padding-bottom: clamp(32px, 8vh, 100px); }
+}
 
 /* ============================================================
    FOOTER (Velora footer row)
