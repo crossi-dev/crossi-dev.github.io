@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Rossi — Desarrollador de MCP y agentes de IA · plataforma MCP en producción</title>
+  <meta name="description" content="Backend & AI engineer con una plataforma MCP en producción — listada en Glama, con 3 pull requests mergeados en Mastra (26k★). Construyó Velora: un servidor MCP de 61 herramientas que maneja pagos y facturación reales, operado por Claude, ChatGPT y Gemini. Bilingüe EN/ES · Remoto · USD." />
+  <meta name="author" content="Carlos Rossi" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Carlos Rossi" />
+  <meta property="og:title" content="Carlos Rossi — Desarrollador de MCP y agentes de IA · plataforma MCP en producción" />
+  <meta property="og:description" content="Backend & AI engineer con una plataforma MCP en producción — listada en Glama, con 3 pull requests mergeados en Mastra (26k★). Construyó Velora: un servidor MCP de 61 herramientas operado por Claude, ChatGPT y Gemini." />
+  <meta property="og:url" content="https://cv.somosvelora.com/es/" />
+  <meta property="og:image" content="https://cv.somosvelora.com/assets/og-image.png" />
+  <meta property="og:image:width" content="2400" />
+  <meta property="og:image:height" content="1260" />
+  <meta property="og:image:alt" content="Carlos Rossi — desarrollador de MCP y agentes de IA, creador de Velora, un servidor MCP de 61 herramientas operado por Claude, ChatGPT y Gemini." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carlos Rossi — Desarrollador de MCP y agentes de IA · plataforma MCP en producción" />
+  <meta name="twitter:description" content="Plataforma MCP en producción · listada en Glama · fixes mergeados en Mastra (26k★). Construyó Velora: un servidor MCP de 61 herramientas. Remoto · USD." />
+  <meta name="twitter:image" content="https://cv.somosvelora.com/assets/og-image.png" />
+  <meta name="theme-color" content="#FAF6EE" />
+  <link rel="canonical" href="https://cv.somosvelora.com/es/" />
+  <link rel="alternate" hreflang="en" href="https://cv.somosvelora.com/" />
+  <link rel="alternate" hreflang="es" href="https://cv.somosvelora.com/es/" />
+  <link rel="alternate" hreflang="x-default" href="https://cv.somosvelora.com/" />
+
+  <!-- Icons -->
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../assets/favicon-180.png" />
+
+  <!-- Type: Fraunces (editorial serif) + DM Sans (body) + JetBrains Mono — las mismas familias de Velora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- GSAP + ScrollTrigger via CDN (static-compatible, progressive enhancement) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- JSON-LD: Person schema para indexado / compartir -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carlos Rossi",
+    "url": "https://cv.somosvelora.com/es/",
+    "jobTitle": "Desarrollador de MCP y agentes de IA",
+    "email": "mailto:gestiones@somosvelora.com",
+    "knowsLanguage": ["es", "en"],
+    "knowsAbout": [
+      "Model Context Protocol (MCP)",
+      "Agentes de IA",
+      "Sistemas multi-agente",
+      "Protocolo A2A",
+      "Google ADK",
+      "TypeScript",
+      "Next.js",
+      "Google Cloud Run"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <!-- ============================ NAV ============================ -->
+  <nav id="nav" aria-label="Principal">
+    <div class="nav-inner">
+      <a href="#top" class="nav-mark" aria-label="Carlos Rossi — inicio">Carlos&nbsp;Rossi</a>
+      <div class="nav-links">
+        <a href="#work">Trabajo</a>
+        <a href="#shipped">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#background">Trayectoria</a>
+        <a href="#contact">Contacto</a>
+        <a href="/" hreflang="en">EN</a>
+      </div>
+      <span class="nav-cta">
+        <a class="btn btn-primary" href="mailto:gestiones@somosvelora.com?subject=Consulta%20de%20proyecto">Escribime</a>
+      </span>
+    </div>
+  </nav>
+
+  <!-- ============================ HERO ============================ -->
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-lead">
+        <h1 class="hero-name" data-hero>Carlos&nbsp;Rossi</h1>
+        <p class="hero-role" data-hero>Backend & AI engineer · TypeScript/Node · MCP, agentes y extracción de documentos en producción</p>
+
+        <p class="hero-pitch" data-hero>
+          Corro una <strong>plataforma MCP en producción</strong> listada en
+          <a href="https://glama.ai/mcp/servers/crossi-dev/velora-mcp" target="_blank" rel="noopener">Glama</a> —
+          desplegada en Cloud Run, escala a demanda: 61 herramientas que Claude, ChatGPT y Gemini
+          operan para llevar un negocio real, con pagos y facturación reales incluidos.
+          <strong>3 pull requests mergeados</strong> en
+          <a href="https://github.com/mastra-ai/mastra" target="_blank" rel="noopener">Mastra</a> (26k★).
+        </p>
+
+        <div class="hero-actions" data-hero>
+          <a class="btn btn-primary" href="#work">Ver el trabajo ↓</a>
+          <a class="btn btn-ghost" href="https://github.com/crossi-dev" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+
+        <p class="hero-avail" data-hero>
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Disponible · Remoto · Horario US/EU · USD
+        </p>
+      </div>
+
+      <!-- Panel de prueba: una conexión MCP en vivo que refleja la superficie de Velora -->
+      <aside class="hero-card" data-hero aria-hidden="true">
+        <div class="hero-card-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="label">mcp · velora</span>
+        </div>
+        <div class="hero-card-body">
+          <div class="row"><span class="mut">$</span> mcp connect <span class="key">agents.somosvelora.com</span></div>
+          <div class="row"><span class="mut">→</span> auth: HMAC-SHA256 · multi-tenant</div>
+          <div class="row"><span class="mut">→</span> herramientas cargadas: <span class="key">61</span> · packs: <span class="key">14</span></div>
+          <div class="row"><span class="mut">→</span> agentes online: <span class="key">12+</span> vía A2A</div>
+          <div class="row"><span class="mut">⚑</span> register_sale · emit_invoice · quote_shipping</div>
+          <div class="row"><span class="ok">●</span> listo — operar un negocio real desde el chat</div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- ============================ CASO DE ESTUDIO / PRUEBA ============================ -->
+  <main id="main">
+  <section class="section case" id="work">
+    <div class="wrap">
+      <div class="case-head">
+        <p class="eyebrow on-dark" data-reveal>Caso de estudio · en producción</p>
+        <h2 class="case-title" data-reveal>
+          Velora — donde Claude, ChatGPT y Gemini llevan un negocio real
+        </h2>
+        <p class="case-lead" data-reveal>
+          Una plataforma de comercio multi-agente, chat-first, para negocios en Argentina.
+          Expone un servidor MCP en producción con 61 herramientas que cubren todo el ciclo
+          comercial — y cualquier cliente MCP puede operar un negocio real a través de él,
+          con acceso multi-tenant autenticado por HMAC. Es el producto real —
+          desplegado en Cloud Run, escala a demanda.
+        </p>
+      </div>
+
+      <!-- EVIDENCIA VISUAL REAL — capturada del producto en vivo -->
+      <figure class="proof proof-wide" data-reveal>
+        <div class="browser">
+          <div class="browser-bar">
+            <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+            <a class="url mono" href="https://somosvelora.com" target="_blank" rel="noopener">somosvelora.com</a>
+          </div>
+          <picture>
+            <source srcset="../assets/velora-integrations.webp" type="image/webp" />
+            <img
+              src="../assets/velora-integrations.png"
+              width="1440" height="1410"
+              loading="eager" fetchpriority="high" decoding="async"
+              alt="El producto de Velora: Claude, ChatGPT y Gemini operando el mismo negocio vía MCP — vendiendo, leyendo el catálogo en vivo con precios y stock, y generando un link de pago." />
+          </picture>
+        </div>
+        <figcaption>
+          El mismo servidor MCP, tres clientes. Claude vende y manda un link de
+          MercadoPago; ChatGPT lee el catálogo en vivo; Gemini consulta ventas — todo
+          sobre el estándar abierto MCP, contra un negocio real.
+        </figcaption>
+      </figure>
+
+      <div class="proof-pair">
+        <figure class="proof" data-reveal>
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+              <a class="url mono" href="https://somosvelora.com" target="_blank" rel="noopener">somosvelora.com</a>
+            </div>
+            <picture>
+              <source srcset="../assets/velora-landing-desktop.webp" type="image/webp" />
+              <img
+                src="../assets/velora-landing-desktop.png"
+                width="1440" height="900"
+                loading="lazy" decoding="async"
+                alt="Landing de Velora: un asistente de comercio chat-first respondiéndole a un cliente sobre stock del catálogo en tiempo real." />
+            </picture>
+          </div>
+          <figcaption>Superficie chat-first — el asistente le responde a un cliente sobre catálogo y stock en tiempo real.</figcaption>
+        </figure>
+
+        <figure class="proof proof-phone" data-reveal>
+          <div class="device">
+            <picture>
+              <source srcset="../assets/velora-landing-mobile.webp" type="image/webp" />
+              <img
+                src="../assets/velora-landing-mobile.png"
+                width="390" height="844"
+                loading="lazy" decoding="async"
+                alt="Velora en el celular: el mismo asistente de comercio chat-first, responsive en un teléfono." />
+            </picture>
+          </div>
+          <figcaption>Celular — la misma superficie, responsive.</figcaption>
+        </figure>
+      </div>
+
+      <div class="case-grid">
+        <div class="case-cell" data-reveal>
+          <h3>61 herramientas, 14 packs</h3>
+          <p>
+            Facturación fiscal (AFIP/ARCA), pagos y links de pago de MercadoPago,
+            logística (sandbox), catálogo, ventas, caja, y mensajería de WhatsApp
+            vía la Meta Cloud API.
+          </p>
+        </div>
+        <div class="case-cell" data-reveal>
+          <h3>Multi-agente sobre A2A</h3>
+          <p>
+            Un supervisor más sub-agentes especializados comunicándose sobre el
+            protocolo A2A, con identidades de agente firmadas (Ed25519), orquestado
+            con Google ADK y Gemini.
+          </p>
+        </div>
+        <div class="case-cell" data-reveal>
+          <h3>Construido para producción</h3>
+          <p>
+            Next.js / TypeScript sobre Cloud Run con Postgres. Mutaciones idempotentes
+            en los caminos de dinero, aislamiento por tenant, verificación de firma de
+            webhooks, colas de tareas asíncronas.
+          </p>
+        </div>
+      </div>
+
+      <div class="case-actions" data-reveal>
+        <a class="btn btn-on-dark" href="https://somosvelora.com" target="_blank" rel="noopener">Abrir el producto ↗</a>
+        <a class="btn btn-ghost on-dark" href="https://github.com/crossi-dev/velora-mcp" target="_blank" rel="noopener">velora-mcp en GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TAMBIÉN CONSTRUÍ ============================ -->
+  <section class="section divider-top" id="shipped">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title" data-reveal>También construí</h2>
+        <p class="section-sub" data-reveal>
+          Piezas públicas y verificables del mismo stack — código y endpoints
+          reales que podés chequear, no una slide.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">velora-mcp</h3>
+            <span class="badge badge-green"><span class="badge-dot"></span>Producción</span>
+          </div>
+          <p class="card-desc">
+            El servidor MCP de comercio argentino detrás de Velora: facturación
+            AFIP/ARCA real (CAE en vivo), MercadoPago, logística (sandbox), catálogo
+            y WhatsApp — 61 herramientas en 14 packs detrás de un único endpoint
+            autenticado por HMAC, multi-tenant.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://github.com/crossi-dev/velora-mcp" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="link-arrow" href="https://glama.ai/mcp/servers/crossi-dev/velora-mcp" target="_blank" rel="noopener">Listado en Glama ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">latam-tools</h3>
+            <span class="badge">Registro MCP</span>
+          </div>
+          <p class="card-desc">
+            Las herramientas fiscales puras, sin auth, publicadas como manifiesto de
+            servidor MCP standalone — registradas para que cualquier cliente
+            compatible con MCP las descubra y conecte sobre Streamable HTTP.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://github.com/crossi-dev/latam-tools" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">Motor de extracción de documentos</h3>
+            <span class="badge badge-green"><span class="badge-dot"></span>En producción</span>
+          </div>
+          <p class="card-desc">
+            Un motor de extracción de documentos en producción para un cliente:
+            entran PDFs, sale JSON estructurado y validado, con <strong>guardrails
+            determinísticos</strong> — un schema estricto, validación de forma en cada
+            respuesta, y comportamiento fail-closed cuando un documento no cumple.
+            Node.js/TypeScript y Express sobre Google Cloud Run, escala a cero.
+          </p>
+          <p class="card-desc">
+            También construí su harness de evaluación, que puntúa combinaciones de
+            modelo y prompt en <strong>precisión, costo y latencia juntos</strong> sobre 40
+            documentos verificados a mano. Dos hallazgos que produjo: recortar el 55%
+            del prompt costó 0,3 puntos de precisión (82,5% → 82,2%, mismos 736
+            campos), y el propio scorer estaba dejando caer del muestreo los
+            documentos completamente fallados en vez de contarlos como cero — una
+            métrica que solo mide lo que el sistema produjo no puede ver lo que omitió.
+          </p>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">nanoclaw</h3>
+            <span class="badge">Construido · código público</span>
+          </div>
+          <p class="card-desc">
+            Un agente de Microsoft Teams enfocado en seguridad, sobre Outlook:
+            mencionás <span class="mono">@nanoclaw</span> en un chat y lee tu mail y
+            calendario, redacta emails, y crea eventos — con una allow-list
+            fail-closed, un portón de confirmación antes de cada envío, y un sobre de
+            datos no confiables alrededor de los resultados de las herramientas. Un
+            loop de tool-use de Claude sobre el Microsoft 365 Agents SDK, usando el
+            CLI de Outlook <span class="mono">olk</span>, con secretos en GCP Secret
+            Manager sobre Cloud Run. El código es público.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://github.com/crossi-dev/nanoclaw" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <h3 class="card-title">velora-track3</h3>
+            <span class="badge">Google AI Agents Challenge</span>
+          </div>
+          <p class="card-desc">
+            La capa de orquestación multi-agente: un Supervisor más 8 sub-agentes A2A
+            (firmados con Ed25519) sobre Google ADK, Vertex AI y Cloud Run — la
+            postulación de Velora al concurso internacional de agentes de IA de Google.
+          </p>
+          <div class="card-links">
+            <a class="link-arrow" href="https://github.com/crossi-dev/velora-track3" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="link-arrow" href="https://github.com/crossi-dev" target="_blank" rel="noopener">Todos los repos ↗</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ STACK ============================ -->
+  <section class="section divider-top" id="stack">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title" data-reveal>Stack y habilidades</h2>
+        <p class="section-sub" data-reveal>
+          Las herramientas detrás del trabajo — desde el diseño del protocolo hasta el deploy.
+        </p>
+      </div>
+
+      <div class="stack-groups">
+        <div class="stack-group" data-reveal>
+          <h3>Agentes y protocolos</h3>
+          <div class="chips">
+            <span class="chip">Model Context Protocol (MCP)</span>
+            <span class="chip">Agentes de IA</span>
+            <span class="chip">Tool / Function Calling</span>
+            <span class="chip">Sistemas multi-agente</span>
+            <span class="chip">Protocolo A2A</span>
+            <span class="chip">Google ADK</span>
+            <span class="chip">Claude API</span>
+            <span class="chip">Gemini API</span>
+          </div>
+        </div>
+
+        <div class="stack-group" data-reveal>
+          <h3>Build y plataforma</h3>
+          <div class="chips">
+            <span class="chip">TypeScript</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">Google Cloud Run</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Integración de APIs</span>
+            <span class="chip">Webhooks</span>
+          </div>
+        </div>
+
+        <div class="stack-group" data-reveal>
+          <h3>Integraciones construidas</h3>
+          <div class="chips">
+            <span class="chip">WhatsApp Business (Meta Cloud API)</span>
+            <span class="chip">Pagos con MercadoPago</span>
+            <span class="chip">Facturación AFIP / ARCA</span>
+            <span class="chip">Logística / envíos (sandbox)</span>
+          </div>
+        </div>
+
+        <div class="stack-group" data-reveal>
+          <h3>Cómo trabajo</h3>
+          <div class="chips">
+            <span class="chip">Nivel producción, no demos</span>
+            <span class="chip">Auth y rate limiting</span>
+            <span class="chip">Aislamiento multi-tenant</span>
+            <span class="chip">Caminos de dinero idempotentes</span>
+            <span class="chip">Inglés fluido</span>
+            <span class="chip">Compatible con horario US</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TRAYECTORIA ============================ -->
+  <section class="section divider-top" id="background">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title" data-reveal>Trayectoria</h2>
+        <p class="section-sub" data-reveal>
+          Formación, trayectoria, y la prueba de trabajo detrás de lo construido.
+        </p>
+      </div>
+
+      <div class="stack-groups">
+        <div class="stack-group" data-reveal>
+          <h3>Educación</h3>
+          <p class="card-desc">
+            <strong>Técnico en Programación (título universitario)</strong> — Universidad Tecnológica Nacional (UTN), 2020–2022.
+          </p>
+          <p class="card-desc">
+            <strong>Traductor Público de inglés</strong> — Universidad del
+            Aconcagua, Mendoza (2003–2008). Inglés a nivel profesional, casi nativo.
+          </p>
+        </div>
+
+        <div class="stack-group" data-reveal>
+          <h3>Prueba de trabajo</h3>
+          <p class="card-desc">
+            <strong>Velora</strong> · 2024 — actualidad. Diseñó, construyó y
+            operó una plataforma de comercio multi-agente de punta a punta: producto,
+            código, deploys, y respuesta a incidentes sobre Google Cloud.
+          </p>
+          <p class="card-desc">
+            <strong>Choreless — Backend Developer</strong> · 2025–2026 · Remoto.
+            Construyó y mantuvo APIs REST en TypeScript y Node.js, diseñó esquemas
+            relacionales y optimizó consultas SQL, e integró servidores MCP y agentes
+            de IA en servicios de backend.
+          </p>
+          <p class="card-desc">
+            <strong>Open BSP — Remoto (US)</strong> · 2024–2025. Escribió y probó
+            prompts para agentes de IA en producción.
+          </p>
+          <p class="card-desc">
+            <strong>Motor de extracción de documentos (proyecto para cliente)</strong> · 2026 — actualidad.
+            Corriendo en producción, con un harness de evaluación que mide
+            precisión, costo y latencia juntos.
+          </p>
+        </div>
+
+        <div class="stack-group" data-reveal>
+          <h3>Reconocimiento</h3>
+          <p class="card-desc">
+            Velora fue postulada al <strong>concurso internacional de agentes de IA de Google</strong>
+            (2026), construida sobre Google ADK, el protocolo A2A, Gemini, y Cloud Run.
+          </p>
+        </div>
+
+        <div class="stack-group" data-reveal>
+          <h3>Cómo construyo</h3>
+          <p class="card-desc">
+            Claude Code como flujo de trabajo de primera clase: especificación,
+            generación, revisión rigurosa, y testing. Así es como un solo
+            desarrollador construyó y opera una plataforma MCP de 61 herramientas en
+            producción. Yo dirijo; la IA ejecuta.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACTO ============================ -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-inner">
+      <p class="eyebrow on-dark" data-reveal style="margin-bottom:0">Contacto</p>
+      <h2 class="contact-title" data-reveal>Abierto a roles de backend e ingeniería de IA</h2>
+      <p class="contact-sub" data-reveal>
+        Si estás construyendo servidores MCP, agentes de IA, o sistemas de
+        producción que mueven plata real o documentos reales — y buscás a alguien
+        que ya los construyó y los opera, y que mide si realmente funcionan — con
+        gusto charlamos.
+      </p>
+      <div class="hero-actions contact-actions" data-reveal>
+        <a class="btn btn-on-dark" href="mailto:gestiones@somosvelora.com?subject=Hablemos%20%E2%80%94%20backend%20e%20ingenier%C3%ADa%20de%20IA&amp;body=Hola%20Carlos%2C%0A%0AMe%20gustar%C3%ADa%20coordinar%20una%20llamada.%20Estos%20horarios%20me%20quedan%20bien%3A%0A%0A">Coordinar una llamada</a>
+        <a class="btn btn-ghost on-dark" href="https://github.com/crossi-dev" target="_blank" rel="noopener">GitHub ↗</a>
+        <button class="btn btn-ghost on-dark copy-email" type="button" data-email="gestiones@somosvelora.com">
+          <span class="copy-label">gestiones@somosvelora.com</span>
+        </button>
+      </div>
+      <p class="contact-meta" data-reveal>
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Disponible · Remoto · US/EU · USD
+      </p>
+    </div>
+  </section>
+
+    </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer>
+    <div class="wrap foot-row">
+      <span>© 2026 Carlos Rossi</span>
+      <span class="sep">·</span>
+      <span>Desarrollador de MCP y agentes de IA</span>
+      <span class="sep">·</span>
+      <span>Remoto · US/EU</span>
+      <a class="foot-mail" href="mailto:gestiones@somosvelora.com">gestiones@somosvelora.com</a>
+    </div>
+  </footer>
+
+  <!-- ============================ MOTION (progressive enhancement) ============================ -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      // Microinteracción de copiar email (funciona sin importar la preferencia de movimiento).
+      var copyBtn = document.querySelector(".copy-email");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          var email = copyBtn.getAttribute("data-email");
+          var label = copyBtn.querySelector(".copy-label");
+          var prev = label.textContent;
+          function done() {
+            copyBtn.classList.add("copied");
+            label.textContent = "Copiado ✓";
+            setTimeout(function () {
+              copyBtn.classList.remove("copied");
+              label.textContent = prev;
+            }, 1600);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(done, function () {
+              window.location.href = "mailto:" + email;
+            });
+          } else {
+            window.location.href = "mailto:" + email;
+          }
+        });
+      }
+
+      // Frost del nav sticky al hacer scroll (refleja el comportamiento del Header de Velora)
+      var nav = document.getElementById("nav");
+      function onScroll() { nav.classList.toggle("solid", window.scrollY > 8); }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      if (reduce) return;
+      root.classList.add("js");
+
+      function startMotion() {
+        var hero = Array.prototype.slice.call(document.querySelectorAll("[data-hero]"));
+        var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+
+        if (window.gsap && window.ScrollTrigger) {
+          gsap.registerPlugin(ScrollTrigger);
+
+          // UN momento memorable en el hero: un lift-in escalonado, con clip.
+          var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+          tl.from(hero, {
+            yPercent: 18, opacity: 0, duration: 0.9, stagger: 0.08,
+            onStart: function () { hero.forEach(function (el) { el.classList.add("is-in"); }); }
+          });
+
+          // Reveals contenidos y conscientes del contenido en el resto de la página.
+          items.forEach(function (el) {
+            gsap.to(el, {
+              opacity: 1, y: 0, duration: 0.7, ease: "power2.out",
+              scrollTrigger: { trigger: el, start: "top 86%", once: true },
+              onStart: function () { el.classList.add("is-in"); }
+            });
+          });
+        } else {
+          hero.concat(items).forEach(function (el) { el.classList.add("is-in"); });
+        }
+      }
+
+      // Los elementos de reveal arrancan en opacity:0 desde el primer paint, así que
+      // esperar a window.load (que espera los dos scripts del CDN y cada imagen) dejaba
+      // toda la página en blanco en una conexión lenta. Arranca apenas el DOM está
+      // parseado, y fuerza todo visible después de 2s pase lo que pase — un CDN caído
+      // nunca debe dejar la página vacía.
+      if (document.readyState !== "loading") startMotion();
+      else document.addEventListener("DOMContentLoaded", startMotion);
+
+      setTimeout(function () {
+        var els = document.querySelectorAll("[data-reveal], [data-hero]");
+        // Un tween trabado (ej: rAF pausado con la pestaña en segundo plano) sigue
+        // escribiendo opacity/transform inline, deshaciendo este failsafe en silencio.
+        // Mata cualquier tween en curso sobre estos elementos antes de limpiar los
+        // estilos para que la limpieza quede firme.
+        if (window.gsap) gsap.killTweensOf(els);
+        els.forEach(function (el) {
+          el.classList.add("is-in");
+          el.style.opacity = "";
+          el.style.transform = "";
+        });
+      }, 2000);
+    })();
+  </script>
+
+</body>
+</html>
