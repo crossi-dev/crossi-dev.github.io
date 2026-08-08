@@ -332,7 +332,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .nav-links::-webkit-scrollbar { display: none; }
 .nav-links a { white-space: nowrap; }
 @media (min-width: 760px) {
-  .nav-links { gap: 2.25rem; overflow-x: visible; margin-inline: 0; }
+  .nav-links { gap: 2.25rem; overflow-x: visible; margin-inline: 2rem; }
 }
 .nav-links a {
   font-size: 0.9375rem;
